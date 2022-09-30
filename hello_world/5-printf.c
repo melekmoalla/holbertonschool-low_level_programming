@@ -1,4 +1,4 @@
-#include <stio.h>
+#include <stdio.h>
 /**
 *main - main to printf string
 *Return: Always 0
