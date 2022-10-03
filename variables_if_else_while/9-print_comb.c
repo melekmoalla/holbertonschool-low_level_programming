@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- *
- *
+ * main - print the num with " ,"
+ * Return: 0
  */
 
 int main(void)
@@ -11,6 +11,7 @@ int main(void)
     {
         putchar(ch);
         ch++;
+        putchar(' ');
         putchar(',');
     }
 
