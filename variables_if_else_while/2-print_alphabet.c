@@ -1,9 +1,9 @@
 #include <stdio.h>
 /**
-* main - main print all lower character
-*
-*
-* Return: 0
+ * main - main print all lower character
+ *
+ *
+ * Return: 0
 */
 int main(void)
 {
