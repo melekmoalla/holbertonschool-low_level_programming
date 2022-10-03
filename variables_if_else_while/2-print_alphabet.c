@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- *main - main print all lower character
+ * main - main print all lower character
  *
  *
  * Return: 0
