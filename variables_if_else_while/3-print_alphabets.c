@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - main print all lower character and all lowercase
  *
@@ -18,6 +19,6 @@ int main(void)
         putchar(be);
         be++;
     }
-    putchar("\n");
+    putchar('\n');
     return 0;
 }
