@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - print all the number
@@ -8,13 +7,12 @@
 
 int main(void)
 {
-    char ch = '0';
-
-    while (ch <= '9')
-    {
-        putchar(ch);
-        ch++;
-    }
-    putchar('\n');
-    return (0);
+int ch = '0';
+while (ch <= '9')
+{
+putchar(ch);
+ch++;
+}
+putchar('\n');
+return (0);
 }
