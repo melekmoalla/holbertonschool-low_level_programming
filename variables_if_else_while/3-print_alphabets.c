@@ -19,6 +19,5 @@ int main(void)
         be++;
     }
     putchar("\n");
-    
     return 0;
 }
