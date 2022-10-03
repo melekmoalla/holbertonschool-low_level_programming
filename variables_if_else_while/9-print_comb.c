@@ -7,7 +7,7 @@
 int main(void)
 {
     int ch = '0';
-    char i = ',';
+
     while (ch <= '9')
     {
         if (ch != '9')
@@ -20,7 +20,7 @@ int main(void)
         else
         {
             putchar(ch);
-            ch++ + i;
+            ch++;
         }
     }
     return (0);
