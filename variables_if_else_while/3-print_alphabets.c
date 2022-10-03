@@ -2,7 +2,6 @@
 /**
  * main - main print all lower character and all lowercase
  *
- *
  * Return: 0
  */
 int main(void)
@@ -16,10 +15,10 @@ int main(void)
     }
     while (be <= 'Z')
     {
-        putchar(ch+be);
+        putchar(be);
         be++;
     }
+    putchar(\n);
     
     return 0;
 }
-
