@@ -2,10 +2,12 @@
 #include <stdlib.h>
 
 /**
+ *
  * main - main print all lower character and all lowercase
  *
  * Return: 0
  */
+
 int main(void)
 {
 
