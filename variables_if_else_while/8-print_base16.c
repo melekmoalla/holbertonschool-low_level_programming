@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- *
- *
+ * main - print some alphabet and num
+ * Return: 0
  */
 
 int main(void)
