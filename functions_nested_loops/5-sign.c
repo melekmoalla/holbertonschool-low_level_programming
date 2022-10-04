@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code.
- *
+ * print_sign - return wahat is writed value  1 or -1 or 0
+ * @n: int
  * Return: Always 0.
  */
 
