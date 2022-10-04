@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * int _islower - return 1 lowercase
+ * _islower - return 1 lowercase
+ * @c: int
  * Return: 0
  */
 
@@ -13,5 +14,5 @@ int _islower(int c)
 	else
 		return (0);
 
-	putchar('\n')
+	putchar('\n');
 }
