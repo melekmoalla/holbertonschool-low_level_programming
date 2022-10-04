@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - return 1 lowercase
- * @c: int
+ * _isalpha - return 1 alphabet
  * Return: 0
  */
 
