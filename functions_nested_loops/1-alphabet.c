@@ -3,7 +3,6 @@
 
 /**
  * print_alphabet - print alphabet
- * @ch: int
  * Return: ch
  */
 
