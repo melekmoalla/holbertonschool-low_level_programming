@@ -2,8 +2,9 @@
 #include "main.h"
 
 /**
- * main - print alphabet
- * Return: 0
+ * print_alphabet - print alphabet
+ * @ch: int
+ * Return: ch
  */
 
 void print_alphabet(void)
