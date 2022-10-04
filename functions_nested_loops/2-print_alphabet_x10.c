@@ -2,6 +2,7 @@
 
 /**
  * main - print 10 line
+ * print_alphabet_x10: write 10 line
  * Return: 0
  */
 
