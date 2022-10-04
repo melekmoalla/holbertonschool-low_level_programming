@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - return 1 alphabet
+ * @c: int
  * Return: 0
  */
 
