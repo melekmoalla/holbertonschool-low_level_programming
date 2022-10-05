@@ -2,15 +2,12 @@
 
 /**
  * jack_bauer - write the clock
- * @ch: int
- * @i: int
  * Return: ch : i
  */
 
 void jack_bauer(void)
 
 {
-
 	int ch;
 	int i;
 
