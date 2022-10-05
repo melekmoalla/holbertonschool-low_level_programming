@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * times_table - write the clock
- * Return: 0
+ * add - add two number
+ * Return: sum
  */
 
 int add(int a, int b)
 {
-    int sum;
+	int sum;
 
-    sum = b + a;
-    return (sum);
+	sum = b + a;
+	return (sum);
 }
