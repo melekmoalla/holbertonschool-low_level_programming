@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * jack_bauer - write the clock
- * Return: ch : i
+ * times_table - write the clock
+ * Return: 0
  */
 
 void times_table(void)
