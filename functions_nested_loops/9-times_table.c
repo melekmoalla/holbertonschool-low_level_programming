@@ -10,9 +10,9 @@ void times_table(void)
 	int n;
 	int i;
 	int d;
-	for (n = 0; n < 10; n++)
+	for (n = 0; n <= 9; n++)
 	{
-		for (i = 0; i < 10; i++)
+		for (i = 0; i <= 9; i++)
 		{
 			d = (n * i);
 			if (d != 0)
@@ -21,17 +21,16 @@ void times_table(void)
 				{
 					printf(",  ");
 				}
-				else
+				else if (i <= 9)
 				{
 					printf(", ");
 				}
 			}
-			else
+			else if (i > 0)
 			{
+				printf(",  ");
 			}
-			{
-				printf("%d", d);
-			}
+			printf("%d", d);
 		}
 		printf("\n");
 	}
