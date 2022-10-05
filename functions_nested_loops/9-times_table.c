@@ -18,7 +18,7 @@ void times_table(void)
 			d = (n * i);
 			if (d != 0)
 			{
-				if (d != 0 && d <= 9)
+				if (d <= 9)
 				{
 					printf(",  ");
 				}
