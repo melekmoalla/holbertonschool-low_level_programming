@@ -10,23 +10,29 @@ void times_table(void)
 	int n;
 	int i;
 	int d;
-
-	for (n = 0; n <= 9; n++)
+	for (n = 0; n < 10; n++)
 	{
-		for (i = 0; i <= 9; i++)
+		for (i = 0; i < 10; i++)
 		{
 			d = (n * i);
-			if (d == 0)
+			if (d != 0)
 			{
-				_putchar(d + '0');
+				if (d != 0 && d <= 9)
+				{
+					printf(",  ");
+				}
+				else
+				{
+					printf(", ");
+				}
 			}
-
+			else
 			{
-				if (i < 9)
-					_putchar(',');
-				_putchar(' ');
+			}
+			{
+				printf("%d", d);
 			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
