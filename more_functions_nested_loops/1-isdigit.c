@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - return 0 ro 1
+ * _isdigit - return 0 ro 1
  *@c: int
  * Return: 1 or 0
  */
@@ -13,4 +13,3 @@ int _isdigit(int c)
 	else
 		return (0);
 }
-
