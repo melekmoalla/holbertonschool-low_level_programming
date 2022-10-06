@@ -2,7 +2,7 @@
 
 /**
  * _isupper - return 0 ro 1
- *
+ *@c: int
  * Return: Always 0.
  */
 
