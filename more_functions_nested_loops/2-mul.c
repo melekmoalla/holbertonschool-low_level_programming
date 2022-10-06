@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * _isdigit - return 0 ro 1
+ *2-mul - multiplies two integers
  *@a: int
  *@b: int
- * Return: 1 or 0
+ * Return: c
  */
 
 int mul(int a, int b)
 {
-    int c;
+	int c;
 
-    c = a * b;
+	c = a * b;
 
-    return (c);
+	return (c);
 }
