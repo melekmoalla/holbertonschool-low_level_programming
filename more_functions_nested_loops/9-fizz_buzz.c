@@ -16,15 +16,9 @@ int main(void)
 
 		if ((c % 3 == 0) && (c % 5 == 0))
 		{
-			if (c != 100)
-			{
-				printf("FizzBuzz");
-				printf(" ");
-			}
-			else
-			{
-				printf("FizzBuzz");
-			}
+
+			printf("FizzBuzz");
+			printf(" ");
 		}
 		else if (c % 3 == 0)
 		{
@@ -33,8 +27,15 @@ int main(void)
 		}
 		else if (c % 5 == 0)
 		{
-			printf("Buzz");
-			printf(" ");
+			if (c != 100)
+			{
+				printf("Buzz");
+				printf(" ");
+			}
+			else
+			{
+				printf("Buzz");
+			}
 		}
 		else if (c != (c % 3 == 0) || c != (c % 5 == 0))
 		{
