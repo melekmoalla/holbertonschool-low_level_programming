@@ -22,4 +22,5 @@ void print_number(int n)
 		}
 		printf("%d", n % 10);
 	}
+	printf("\n");
 }
