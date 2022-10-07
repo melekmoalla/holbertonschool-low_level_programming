@@ -7,7 +7,6 @@
 
 void print_triangle(int size)
 {
-
 	int a;
 	int d;
 	int i;
@@ -33,4 +32,3 @@ void print_triangle(int size)
 		}
 	}
 }
-
