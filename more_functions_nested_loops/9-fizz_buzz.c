@@ -3,7 +3,7 @@
 
 /**
  * main - print fizzbuzz
- * return: 0
+ * Return: 0
  */
 
 int main(void)
@@ -16,8 +16,15 @@ int main(void)
 
 		if ((c % 3 == 0) && (c % 5 == 0))
 		{
-			printf("FizzBuzz");
-			printf(" ");
+			if (c != 100)
+			{
+				printf("FizzBuzz");
+				printf(" ");
+			}
+			else
+			{
+				printf("FizzBuzz");
+			}
 		}
 		else if (c % 3 == 0)
 		{
