@@ -16,11 +16,10 @@ void print_number(int n)
 	}
 	else
 	{
-		if (n >= 9)
+		if (n > 9)
 		{
 			printf("%d", n / 10);
 		}
 		printf("%d", n % 10);
 	}
-	printf("\n");
 }
