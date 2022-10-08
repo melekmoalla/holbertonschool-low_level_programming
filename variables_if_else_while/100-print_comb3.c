@@ -18,10 +18,18 @@ int main(void)
 		{
 			if ((i != a) && (i < a))
 			{
+
 				putchar(i);
 				putchar(a);
-				putchar(',');
-				putchar(' ');
+				if (i < '8')
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				else
+				{
+					continue;
+				}
 			}
 		}
 	}
