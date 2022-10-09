@@ -12,7 +12,7 @@ int main(void)
 	int c;
 	int d = 0;
 
-	for (c = 1; c < 1024; c++)
+	for (c = 1; c < 244293; c++)
 	{
 		if ((c % a == 0) || (c % b == 0))
 		{
