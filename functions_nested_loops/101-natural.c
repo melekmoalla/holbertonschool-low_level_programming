@@ -14,16 +14,12 @@ int main(void)
 
 	for (c = 1; c < 1024; c++)
 	{
-		if ((a % c == 0) || (b % c == 0))
+		if ((c % a == 0) || (c % b == 0))
 		{
-			while (d < 1024)
-			{
-				d = d + c;
-				printf("%d", d);
-				break;
-			}
+			d += c;
 		}
 	}
+	printf("%d", c);
 	printf("\n");
 	return (0);
 }
