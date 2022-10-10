@@ -2,7 +2,7 @@
 
 /**
  * puts2 - write  a paragraph by 2
- *@s: string
+ *@str: string
  */
 
 void
@@ -10,6 +10,7 @@ void
 puts2(char *str)
 {
 	int i = 0;
+
 	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
