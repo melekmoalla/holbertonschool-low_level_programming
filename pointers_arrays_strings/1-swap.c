@@ -1,15 +1,16 @@
 #include "main.h"
 
 /**
- * reset_to_98 - switch to 98
+ * swap_int - swap two number
+ * @a :int
  * @n :int
  */
 
 void swap_int(int *a, int *b)
 {
-    int t;
+	int t;
 
-    t = *b;
-    *b = *a;
-    *a = t;
+	t = *b;
+	*b = *a;
+	*a = t;
 }
