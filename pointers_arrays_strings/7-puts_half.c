@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts2 - write  a paragraph by 2
+ * puts_half - write  a half paragraph
  *@str: string
  */
 
@@ -22,7 +22,8 @@ void puts_half(char *str)
 	}
 	for (i = b; i <= a; i++)
 	{
-		printf("%c", str[i]);
+		_putchar(str[i]);
 	}
-	_putchar('\n');
+	putchar('\n');
 }
+
