@@ -5,15 +5,15 @@
  *@str: string
  */
 
-void
-
-puts2(char *str)
+void puts2(char *str)
 {
+	int b;
 	int i;
+	b = strlen(str) - 1;
 
-	for (i = 0; str[i] != '\0'; i += 2)
+	for (i = 0; i <= b; i += 2)
 	{
-		_putchar(str[i]);
+		printf("%c", (str[i]));
 	}
 	printf("\n");
 }
