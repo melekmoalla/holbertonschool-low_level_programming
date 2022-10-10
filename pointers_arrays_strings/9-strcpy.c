@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * print_array - write  a array
- *@a: int
- *@n: int
+ * *_strcpy -  copies the string pointed to by src
+ *@src: string
+ *@dest: string
  */
 
 char *_strcpy(char *dest, char *src)
 {
-    int i;
+	int i;
 
-    for (i = 0; src[i] != '\0'; i++)
-        dest[i] = src[i];
+	for (i = 0; src[i] != '\0'; i++)
+		dest[i] = src[i];
 
-    return dest;
+	return dest;
 }
