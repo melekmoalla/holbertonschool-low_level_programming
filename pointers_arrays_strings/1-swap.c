@@ -3,7 +3,7 @@
 /**
  * swap_int - swap two number
  * @a :int
- * @n :int
+ * @b :int
  */
 
 void swap_int(int *a, int *b)
