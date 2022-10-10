@@ -2,7 +2,7 @@
 
 /**
  * rev_string - write  a paragraph rev
- *@s: char
+ *@s: string
  */
 
 void rev_string(char *s)
