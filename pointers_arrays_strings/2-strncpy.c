@@ -2,8 +2,9 @@
 
 /**
  * _strncpy - write dest+5src
- * @dest:int
- * @src:int
+ * @dest:char
+ * @src:char
+ * @i:int
  * return: dest
  */
 
