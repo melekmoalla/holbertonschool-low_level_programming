@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * reverse_arrayt - swap many number in arry
+ * reverse_array - swap many number in arry
  * @a :int
  * @n :int
  */
