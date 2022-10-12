@@ -14,7 +14,7 @@ char *leet(char *s)
 	char a[5] = "aeotl";
 	char x[5] = "43071";
 	char h[5] = "AEOTL";
-	
+
 	c = strlen(s);
 
 	for (i = 0; i < c; i++)
