@@ -12,17 +12,13 @@ char *cap_string(char *s)
 	int i;
 	int x = strlen(s);
 
-	for (i = 1; i < x; i++)
+	for (i = 0; i <= x; i++)
 	{
-		if ((s[i]) && s[i - 1] == ' ')
+		if (s[i - 1] == '\n' || s[i - 1] == ',' || s[i - 1] == '!' || s[i - 1] == '?' || s[i - 1] == '"' || s[i - 1] == '(' || s[i - 1] == ')' || s[i - 1] == '{' || s[i - 1] == '}')
 		{
-
-			s[i] = toupper(s[i]);
-		}
-		if ((s[0]))
-		{
-			s[0] = toupper(s[0]);
+			s[i] = s[i] - 32;
 		}
 	}
+
 	return (s);
 }
