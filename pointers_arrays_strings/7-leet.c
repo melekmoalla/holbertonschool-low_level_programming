@@ -5,6 +5,7 @@
  *@s: char
  * Return: s
  */
+
 char *leet(char *s)
 {
 	int i;
