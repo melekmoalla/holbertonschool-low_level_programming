@@ -12,7 +12,7 @@ char *cap_string(char *s)
 	int i;
 	int x;
 
-	x == strlen(s);
+	x = strlen(s);
 
 	for (i = 1; i < x; i++)
 	{
