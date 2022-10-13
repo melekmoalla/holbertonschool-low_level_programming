@@ -4,6 +4,7 @@
  * *_strpbrk -  function that locates a substring.
  * @s:char
  * @accept:char
+ * Return: 0
  */
 
 char *_strpbrk(char *s, char *accept)
