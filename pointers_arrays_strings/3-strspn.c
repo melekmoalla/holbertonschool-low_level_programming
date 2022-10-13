@@ -2,29 +2,28 @@
 
 /**
  * _strspn - function that gets the length of a prefix substring.
- *
- * Return: e
+ * @s:char
+ * @acceplt:char
+ * Return: z
  */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int i;
-	unsigned int a;
-	unsigned int b;
 	unsigned int z;
-	unsigned int e = 0;
 
-	a = strlen(s);
-	b = a = strlen(accept);
-
-	for (z = 0; z <= b; z++)
+	for (z = 0; s[z] != '\0'; z++)
 	{
-		for (i = 0; i <= a; i++)
+		for (i = 0; accept[i] != '\0'; i++)
 		{
-			if (accept[z] == s[i])
+			if (s[z] == accept[i])
 			{
-				e += 1;
+				break;
 			}
 		}
+		if (!accept[i])
+		{
+			break;
+		}
 	}
-	return (e);
+	return (z);
 }
