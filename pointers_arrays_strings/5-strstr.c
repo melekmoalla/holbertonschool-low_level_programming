@@ -3,8 +3,9 @@
 
 /**
  * main - check the code
- *
- * Return: Always 0.
+ *@haystack: char 
+ *@needle: char
+ * Return: haystack + i or 0
  */
 
 char *_strstr(char *haystack, char *needle)
