@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *@haystack: char 
- *@needle: char
+ * *_strstr - function that locates a substring.
+ * @haystack: char
+ * @needle: char
  * Return: haystack + i or 0
  */
 
@@ -21,9 +21,13 @@ char *_strstr(char *haystack, char *needle)
 		}
 
 		if (!needle[j])
+		{
 			return (haystack + i);
+		}
 		else
+		{
 			j = 0;
+		}
 	}
 	return (0);
 }
