@@ -16,11 +16,11 @@ unsigned int _strspn(char *s, char *accept)
 	a = strlen(s);
 	b = a = strlen(accept);
 
-	for (i = 0; i <= a; i++)
+	for (z = 0; z <= b; z++)
 	{
-		for (z = 0; z <= b; z++)
+		for (i = 0; i <= a; i++)
 		{
-			if (s[i] == accept[z])
+			if (accept[z] == s[i])
 			{
 				e += 1;
 			}
