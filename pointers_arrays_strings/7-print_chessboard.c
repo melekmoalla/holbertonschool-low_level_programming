@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- *print_chessboard - print the table without , 
- *@a: char 
+ *print_chessboard - print the table without ,
+ *@a: char
  */
 
 void print_chessboard(char (*a)[8])
