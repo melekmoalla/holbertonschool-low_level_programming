@@ -2,7 +2,7 @@
 
 /**
  * print_chessboard - print the table without , 
- *@a: char 
+ * @a: char 
  */
 
 void print_chessboard(char (*a)[8])
