@@ -1,5 +1,5 @@
 #ifndef INV_TREE_H
-#define INV_tree_H
+#define INV_TREE_H
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
