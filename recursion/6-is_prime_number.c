@@ -27,15 +27,13 @@ int IsPrime(int number, int i)
 			return (IsPrime(number, i + 1));
 	}
 }
-
 /**
  *is_prime_number - that returns 1 if the input integer is a prime number
- *@n:int 
- *Return : 0 or 1
+ *@n:int
+ *Return: 1 succes or 1 faild
  */
 
 int is_prime_number(int n)
 {
 	return (IsPrime(n, 2));
 }
-
