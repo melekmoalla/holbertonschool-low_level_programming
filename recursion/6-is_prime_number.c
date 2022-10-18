@@ -2,8 +2,10 @@
 #include <stdio.h>
 
 /**
- *IsPrime - that returns 1 if the input integer is a prime number
- *
+ *is_prime_number - that returns 1 if the input integer is a prime number
+ *@n: int
+ *@i: int
+ *@number: int
  * Return: Always 0.
  */
 
@@ -23,7 +25,7 @@ int IsPrime(int number, int i)
 		if (number % i == 0)
 			return (0);
 		else
-			return IsPrime(number, i + 1);
+			return (IsPrime(number, i + 1));
 	}
 }
 
