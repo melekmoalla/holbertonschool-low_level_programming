@@ -31,10 +31,11 @@ int IsPrime(int number, int i)
 /**
  *is_prime_number - that returns 1 if the input integer is a prime number
  *@n:int 
- *return : 0 or 1
+ *Return : 0 or 1
  */
 
 int is_prime_number(int n)
 {
 	return (IsPrime(n, 2));
 }
+
