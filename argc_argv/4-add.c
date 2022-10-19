@@ -29,14 +29,14 @@ int main(int argc, char *argv[])
 			{
 				if (argv[i][j] > '9' || argv[i][j] < '0')
 				{
-
-					sum += atoi(argv[i]);
-				}
-				else
-				{
 					printf("Error");
 					printf("\n");
 					return (1);
+				}
+				else
+				{
+
+					sum += atoi(argv[i]);
 				}
 			}
 		}
