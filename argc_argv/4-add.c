@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main -  a program that adds positive numbers.
+ *@argc: int
+ *@argv: int
+ *Return: 0
+ */
+
+int main(int argc, char *argv[])
+{
+	int i;
+	int j;
+	int sum = 0;
+
+	if (argc < 3)
+	{
+		printf("0");
+		printf("\n");
+	}
+
+	else
+	{
+
+		for (i = 1; i < argc; i++)
+		{
+			for (j = 1; j < argc; j++)
+			{
+				if (argv[i][j] >= 65 || argv[i][j] <= 122)
+				{
+					printf("Error");
+					printf("\n");
+					return (1);
+				}
+				else
+				{
+
+					sum += atoi(argv[i]);
+				}
+			}
+			printf("%d", sum);
+		}
+		printf("\n");
+	}
+	return (0);
+}
+
