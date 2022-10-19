@@ -2,8 +2,9 @@
 
 /**
  * main - program that prints its name,
- * @arg: int
- * @argv: int
+ *@argc: int
+ *@argv: int
+ *Return: 0
  */
 
 int main(int argc, char *argv[])
