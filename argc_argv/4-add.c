@@ -39,8 +39,8 @@ int main(int argc, char *argv[])
 					return (1);
 				}
 			}
-			printf("%d", sum);
 		}
+		printf("%d", sum);
 		printf("\n");
 	}
 	return (0);
