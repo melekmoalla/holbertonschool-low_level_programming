@@ -27,21 +27,19 @@ int main(int argc, char *argv[])
 		{
 			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				if (argv[i][j] > '9' || argv[i][j] < '0')
+				if (argv[i][j] < '0' || argv[i][j] > '9')
 				{
 					printf("Error");
 					printf("\n");
 					return (1);
 				}
-				else
-				{
-
-					sum += atoi(argv[i]);
-				}
 			}
+
+			sum += atoi(argv[i]);
 		}
-		printf("%d", sum);
-		printf("\n");
 	}
-	return (0);
+	printf("%d", sum);
+	printf("\n");
+}
+return (0);
 }
