@@ -27,16 +27,17 @@ int main(int argc, char *argv[])
 		{
 			for (j = 1; j < argc; j++)
 			{
-				if (argv[i][j] >= 65 || argv[i][j] <= 122)
+				if (argv[i][j] >= '0' && argv[i][j] <= '9')
+				{
+
+					sum += atoi(argv[i]);
+				}
+
+				else
 				{
 					printf("Error");
 					printf("\n");
 					return (1);
-				}
-				else
-				{
-
-					sum += atoi(argv[i]);
 				}
 			}
 			printf("%d", sum);
@@ -45,4 +46,3 @@ int main(int argc, char *argv[])
 	}
 	return (0);
 }
-
