@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		{
 			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				if (argv[i][j] < '0' || argv[i][j] > '9')
+				if (argv[i][j] > '9' || argv[i][j] < '0')
 				{
 					printf("Error");
 					printf("\n");
@@ -40,6 +40,6 @@ int main(int argc, char *argv[])
 	}
 	printf("%d", sum);
 	printf("\n");
-}
-return (0);
+
+	return (0);
 }
