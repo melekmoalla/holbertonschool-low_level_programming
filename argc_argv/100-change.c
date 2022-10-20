@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
     cents = cents - pennies * 1;
 
     coins = quarters + dimes + nickels + pennies;
-    printf("%d\n", coins);
+    printf("%d\n", coins -1);
 
     return (0);
 }
