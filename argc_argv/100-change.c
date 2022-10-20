@@ -10,8 +10,7 @@ int calculate_pennies(int cents);
 
 int main(int argc, char *argv[])
 {
-    int cents;
-    int quarters, dimes, nickels, pennies, coins;
+    int cents, rest = 0;
 
     if (argc != 2)
     {
@@ -26,83 +25,15 @@ int main(int argc, char *argv[])
         return (0);
     }
 
-    quarters = calculate_quarters(cents);
-    cents = cents - quarters * 25;
+    rest += cents / 25;
+    cents %= 25;
+    rest += cents / 10;
+    cents %= 10;
+    rest += cents / 5;
+    cents %= 5;
+    rest += cents / 2;
+    cents %= 2;
 
-    dimes = calculate_dimes(cents);
-    cents = cents - dimes * 10;
-
-    nickels = calculate_nickels(cents);
-    cents = cents - nickels * 5;
-
-    pennies = calculate_pennies(cents);
-    cents = cents - pennies * 1;
-
-    coins = quarters + dimes + nickels + pennies;
-    printf("%d\n", coins -1);
-
+    printf("%d\n", rest + cents);
     return (0);
-}
-
-int calculate_quarters(int cents)
-{
-    int quarters;
-
-    if (cents >= 25)
-    {
-        quarters = cents / 25;
-    }
-    else
-    {
-        quarters = 0;
-    }
-
-    return quarters;
-}
-
-int calculate_dimes(int cents)
-{
-    int dimes;
-    if (cents >= 10)
-    {
-        dimes = cents / 10;
-    }
-    else
-    {
-        dimes = 0;
-    }
-
-    return dimes;
-}
-
-int calculate_nickels(int cents)
-{
-    int nickels;
-    if (cents >= 5)
-    {
-        nickels = cents / 5;
-    }
-    else
-    {
-        nickels = 0;
-    }
-
-    return nickels;
-}
-
-int calculate_pennies(int cents)
-{
-    {
-        int pennies;
-        if (cents >= 1)
-        {
-            pennies = cents;
-        }
-        else
-        {
-            pennies = 0;
-        }
-
-        return pennies;
-    }
 }
