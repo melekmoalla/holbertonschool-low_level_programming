@@ -8,8 +8,7 @@
  *Return: 0
  */
 
-int main(int argc, char *argv[])
-{
+C
 	int i;
 	int j;
 	int sum = 0;
@@ -40,6 +39,5 @@ int main(int argc, char *argv[])
 		printf("%d", sum);
 		printf("\n");
 	}
-
 	return (0);
 }
