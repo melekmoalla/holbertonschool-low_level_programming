@@ -5,7 +5,7 @@
  *check_sqrt - check prim
  *@N: int
  *@mid: int
- * Return: Always 0.
+ *Return: Always 0
  */
 
 int check_sqrt(int mid, int N)
@@ -36,10 +36,11 @@ int _sqrt_recursion(int n)
 {
 
 	if (n == 0)
+	{
 		return (0);
+	}
 	else
 	{
 		return (check_sqrt(1, n));
 	}
 }
-
