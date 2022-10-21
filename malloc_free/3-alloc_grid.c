@@ -25,26 +25,29 @@ int **alloc_grid(int width, int height)
 
 			while (i < height && (array[i] = calloc(width, sizeof(int))) != NULL)
 			{
-				if (array == 0)
-				{
-					for (--i; i > 0; i--)
-					{
-						free(array[i]);
-					}
-					free(array);
-				}
-				++i;
+				ree(array);
 			}
+			++i;
+		}
 
-			if (i != height)
+		if (array == 0)
+		{
+			for (--i; i > 0; i--)
 			{
-				while (i != 0)
-					free(array[--i]);
-				free(array);
-				array = NULL;
+				free(array[i]);
 			}
+			free(array);
+		}
+
+		if (i != height)
+		{
+			while (i != 0)
+				free(array[--i]);
+			free(array);
+			array = NULL;
 		}
 	}
+}
 
-	return (array);
+return (array);
 }
