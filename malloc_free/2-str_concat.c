@@ -2,8 +2,7 @@
 
 /**
  * *str_concat - check the code.
- *@s1: char
- *@s2: char
+ *@s: char
  * Return: Always 0 or t
  */
 
