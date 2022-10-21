@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <ctype.h>
-#include <string.h>
+#include <stdlib.h>
 /**
  * main -  a program that adds positive numbers.
  *@argc: int
@@ -17,9 +16,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-
 	cents = atoi(argv[1]);
-
 	if (cents < 0)
 	{
 		printf("0\n");
