@@ -22,7 +22,15 @@ int **alloc_grid(int width, int height)
 
 			while (i < height && (array[i] = calloc(width, sizeof(int))) != NULL)
 			{
-				ree(array);
+				if (array == 0)
+				{
+					for (--i; i > 0; i--)
+					{
+						free(array[i]);
+					}
+					free(array);
+				}
+				++i;
 			}
 			++i;
 		}
