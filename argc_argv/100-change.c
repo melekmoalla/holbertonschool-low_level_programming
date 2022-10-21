@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 /**
  * main -  a program that adds positive numbers.
  *@argc: int
