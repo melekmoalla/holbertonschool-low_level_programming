@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * *str_concat - check the code.
+ * **alloc_grid - check the code.
  *@width: int
  *@height: int
  * Return: Always 0 or t
@@ -27,9 +27,7 @@ int **alloc_grid(int width, int height)
 			if (i != height)
 			{
 				while (i != 0)
-				{
 					free(array[--i]);
-				}
 				free(array);
 				array = NULL;
 			}
