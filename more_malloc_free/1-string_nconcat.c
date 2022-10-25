@@ -2,7 +2,7 @@
 
 /**
  * *string_nconcat - writes the character c to stdout
- *s@s1: char
+ *@s1: char
  *@s2: char
  * @n: int
  * Return: p
@@ -11,9 +11,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *p;
-	unsigned int i = 0, j = 0;
-	unsigned int l;
-	unsigned int s;
+	unsigned int i = 0, j = 0, s, l;
 
 	if (s1 == NULL)
 	{
