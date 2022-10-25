@@ -3,6 +3,7 @@
 /**
  * *malloc_checked - writes the character c to stdout
  * @b: unsigned int
+ * Return: p
  */
 
 void *malloc_checked(unsigned int b)
