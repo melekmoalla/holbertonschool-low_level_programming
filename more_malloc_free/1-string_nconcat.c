@@ -2,8 +2,8 @@
 
 /**
  * *string_nconcat - writes the character c to stdout
- * @s1: char
- * @s2: char 
+ *s@s1: char
+ *@s2: char
  * @n: int
  * Return: p
  */
@@ -29,7 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	l = strlen(s1);
 	s = n + l;
 
-	p = malloc(sizeof(char) * s);
+	p = malloc(sizeof(char) * s + 1);
 
 	if (!p)
 	{
@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = i; j < s; j++)
 	{
 
-		p[j] = s2[b];
+		*(p + j) = *(s2 + b);
 		b++;
 	}
 	return (p);
