@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * *malloc_checked - writes the character c to stdout
- * @s: char
+ * *string_nconcat - writes the character c to stdout
+ * @s1: char
+ * @s2: char 
  * @n: int
  * Return: p
  */
