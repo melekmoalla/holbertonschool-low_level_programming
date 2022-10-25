@@ -36,18 +36,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	for (i = 0; i < l; i++)
+	while (*s1 != '\0')
 	{
-		*(p + i) = *(s1 + i);
+		*(p + j) = *s1;
+		s1++;
+		j++;
 	}
 
-	for (j = i; j < s; j++)
+	while ((*s2 != '\0') && (i < n))
 	{
-
-		*(p + j) = *(s2 + b);
-		b++;
+		*(p + j) = *s2;
+		s2++;
+		j++;
+		i++;
 	}
-	j++;
 	*(p + j) = '\0';
 
 	return (p);
