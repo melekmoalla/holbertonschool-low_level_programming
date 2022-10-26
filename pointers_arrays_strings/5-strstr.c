@@ -34,6 +34,10 @@ char *_strstr(char *haystack, char *needle)
 				i++;
 			}
 		}
+		else
+		{
+			return (haystack);
+		}
 	}
 	return (0);
 }
