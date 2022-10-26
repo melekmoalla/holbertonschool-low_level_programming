@@ -1,17 +1,19 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+
 /**
  * *_strstr - function that locates a substring.
  * @haystack: char
  * @needle: char
  * Return: haystack + i or 0
  */
+
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j, z = 0;
-
 	int b = strlen(needle) - 1;
+
 	if (needle == NULL || !strlen(needle))
 	{
 		return (haystack);
@@ -29,7 +31,6 @@ char *_strstr(char *haystack, char *needle)
 					if (j == b)
 					{
 						return (haystack + z);
-						break;
 					}
 					j++;
 					i++;
