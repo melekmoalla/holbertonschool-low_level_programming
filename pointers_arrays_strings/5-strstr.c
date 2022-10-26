@@ -11,7 +11,7 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, z = 0;
+	int i, j;
 
 	int b = strlen(needle) - 1;
 
@@ -20,14 +20,13 @@ char *_strstr(char *haystack, char *needle)
 		if (haystack[i] == needle[0])
 		{
 			j = 0;
-			z = i;
 
 			while (haystack[i] == needle[j])
 			{
 
 				if (j == b)
 				{
-					return (haystack + z);
+					return (needle);
 					break;
 				}
 				j++;
