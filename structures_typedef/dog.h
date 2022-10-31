@@ -1,5 +1,6 @@
 #ifndef INV_TREE_H
 #define INV_TREE_H
+#include <stdio.h>
 
 /**
  * struct dog - Define a new type
@@ -14,5 +15,5 @@ struct dog
 	float age;
 	char *owner;
 };
+void init_dog(struct dog *d, char *name, float age, char *owner);
 #endif
-
