@@ -1,11 +1,15 @@
 #include <stdio.h>
 #include "dog.h"
+/**
+ * print_dog - unction that prints a struct dog
+ * @d: for the function struct to use it in fnction print
+*/
 
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
 	{
-		printf("NULL");
+		printf("\n");
 	}
 	else if (d->name == NULL)
 	{
