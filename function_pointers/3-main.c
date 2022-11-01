@@ -22,17 +22,17 @@ int main(int argc, char *argv[])
 
 	if (argc > 4 || argc < 4)
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(98);
 	}
 	if ((argv[2][1] != '\0') || (fonct == NULL) || (argv[2] == NULL))
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(99);
 	}
 	if ((opp == '/' || opp == '%') && (!atoi(argv[3])))
 	{
-		printf("ERROR\n");
+		printf("Error\n");
 		exit(100);
 	}
 
