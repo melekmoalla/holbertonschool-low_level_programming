@@ -35,7 +35,7 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
- *op_add - fonction to div for two int
+ *op_div - fonction to div for two int
  *@a: int
  *@b: int
  *Return: result
