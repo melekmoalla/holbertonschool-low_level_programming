@@ -7,6 +7,7 @@
  * main - fonction to do the test
  * @argc: int
  * @argv: char
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
