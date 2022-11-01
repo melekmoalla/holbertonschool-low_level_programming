@@ -15,7 +15,7 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
- *op_add - fonction to sub for two int
+ *op_sub - fonction to sub for two int
  *@a: int
  *@b: int
  *Return: result
@@ -25,7 +25,7 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 /**
- *op_add - fonction to add to int
+ *op_mul - fonction to add to int
  *@a: int
  *@b: int
  *Return: result
@@ -45,7 +45,7 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- *op_add - fonction to dok mod for two int
+ *op_mod - fonction to dok mod for two int
  *@a: int
  *@b: int
  *Return: result
