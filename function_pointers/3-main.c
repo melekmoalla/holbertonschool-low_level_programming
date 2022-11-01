@@ -14,7 +14,10 @@ int main(int argc, char *argv[])
 	int a;
 	int b;
 	char opp;
+	int (*fonct)(int, int);
 
+	opp = *(argv[2]);
+	fonct = *(get_op_func(&opp));
 	opp = *(argv[2]);
 
 	if (argc > 4 || argc < 4)
@@ -22,7 +25,7 @@ int main(int argc, char *argv[])
 		printf("ERROR\n");
 		exit(98);
 	}
-	if (argv[2][1] != '\0')
+	if ((argv[2][1] != '\0') || (fonct == NULL) || (argv[2] == NULL))
 	{
 		printf("ERROR\n");
 		exit(99);
