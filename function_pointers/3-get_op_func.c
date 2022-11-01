@@ -8,7 +8,7 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	int i = 0;
+	int i;
 
 	op_t ops[] = {
 		{"+", op_add},
@@ -18,6 +18,7 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}};
 
+	i = 0;
 	while (ops[i].op != NULL)
 	{
 		if (*(ops[i].op) == *s)
