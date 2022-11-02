@@ -3,7 +3,7 @@
 /**
  * sum_them_all - fonction to do sum for many parametre
  *@n:const unsigned int
- *Return:
+ *Return: 0
  */
 
 int sum_them_all(const unsigned int n, ...)
@@ -24,3 +24,4 @@ int sum_them_all(const unsigned int n, ...)
 	}
 	return (sum);
 }
+
