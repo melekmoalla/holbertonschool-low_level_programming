@@ -6,8 +6,8 @@
 /**
  * new_dog - print anew name and new owner
  * @name: char
- * @age: float 
- * @owner: char 
+ * @age: float
+ * @owner: char
  *Return: new_dog
 */
 
