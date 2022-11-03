@@ -3,6 +3,14 @@
 #include <string.h>
 #include "dog.h"
 
+/**
+ * new_dog - print anew name and new owner
+ *@name: char
+ *@age: float 
+ *@owner: char 
+ *Return: new_dog
+*/
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 
@@ -10,6 +18,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	int a = strlen(name);
 	int b = strlen(owner);
+
 	new_dog = malloc(sizeof(dog_t));
 
 	if (new_dog == NULL)
