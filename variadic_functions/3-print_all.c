@@ -21,7 +21,7 @@ void printf_int(va_list args)
 }
 
 /**
- * pprintf_float - fonction to print a number float
+ * printf_float - fonction to print a number float
  * @args: va_list
  */
 
