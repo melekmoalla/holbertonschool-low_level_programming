@@ -1,29 +1,51 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - function that prints strings, followed by a new line.
- *@separator: cont char for the ', '
- *@n:const unsigned int
+ * printf_char - fonction to print char
+ * @argc: va_list
  */
 
 void printf_char(va_list args)
 {
 	printf("%c", va_arg(args, int));
 }
+
+/**
+ * printf_int - fonction to print integeer
+ * @argc: va_list
+ */
+
 void printf_int(va_list args)
 {
 	printf("%d", va_arg(args, int));
 }
+
+/**
+ * pprintf_float - fonction to print a number float
+ * @argc: va_list
+ */
+
 void printf_float(va_list args)
 {
 	printf("%f", va_arg(args, double));
 }
+
+/**
+ * printf_st - fonction to print string
+ * @argc: va_list
+ */
+
 void printf_st(va_list args)
 {
 	char *st = va_arg(args, char *);
 
 	printf("%s", st ? st : "(nil)");
 }
+
+/**
+ * print_all - fonction to print all type s of arguments
+ * @format: const char *condt
+ */
 
 void print_all(const char *const format, ...)
 {
