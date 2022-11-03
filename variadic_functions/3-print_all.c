@@ -2,7 +2,7 @@
 
 /**
  * printf_char - fonction to print char
- * @argc: va_list
+ * @args: va_list
  */
 
 void printf_char(va_list args)
@@ -12,7 +12,7 @@ void printf_char(va_list args)
 
 /**
  * printf_int - fonction to print integeer
- * @argc: va_list
+ * @args: va_list
  */
 
 void printf_int(va_list args)
@@ -22,7 +22,7 @@ void printf_int(va_list args)
 
 /**
  * pprintf_float - fonction to print a number float
- * @argc: va_list
+ * @args: va_list
  */
 
 void printf_float(va_list args)
@@ -32,7 +32,7 @@ void printf_float(va_list args)
 
 /**
  * printf_st - fonction to print string
- * @argc: va_list
+ * @args: va_list
  */
 
 void printf_st(va_list args)
