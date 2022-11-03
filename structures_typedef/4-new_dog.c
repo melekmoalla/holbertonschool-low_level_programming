@@ -23,7 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_dog->name == NULL)
 	{
-		free(dog->name);
+		free(new_dog->name);
 		free(new_dog);
 		return (NULL);
 	}
@@ -32,11 +32,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	strcpy(new_dog->owner, owner);
 	if (new_dog->owner == NULL)
 	{
-		free(dog->name);
-		free(dog->owner);
+		free(new_dog->name);
+		free(new_dog->owner);
 		free(new_dog);
 		return (NULL);
 	}
 	return (new_dog);
-
 }
