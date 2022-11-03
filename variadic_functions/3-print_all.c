@@ -21,14 +21,8 @@ void printf_float(va_list args)
 void printf_st(va_list args)
 {
 	char *st = va_arg(args, char *);
-	if (*st != 0)
-	{
-		printf("%s", st);
-	}
-	else
-	{
-		printf("(nil)");
-	}
+
+	printf("%s", st ? st : "(nil)");
 }
 
 void print_all(const char *const format, ...)
