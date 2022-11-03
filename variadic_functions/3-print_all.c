@@ -41,10 +41,9 @@ void print_all(const char *const format, ...)
 
 	va_start(args, format);
 
-	a = strlen(format);
-
-	while (format[z] != '\0' && format != NULL)
+	while (format != NULL && format[z] != '\0')
 	{
+		a = strlen(format);
 		while (i < 4)
 		{
 			if (ops[i].opp == format[z])
