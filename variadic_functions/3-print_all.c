@@ -6,44 +6,67 @@
  *@n:const unsigned int
  */
 
+void printf_char(va_list args)
+{
+	printf("%c", va_arg(args, int));
+}
+void printf_int(va_list args)
+{
+	printf("%d", va_arg(args, int));
+}
+void printf_float(va_list args)
+{
+	printf("%f", va_arg(args, double));
+}
+void printf_st(va_list args)
+{
+	char *st = va_arg(args, char *);
+	if (*st != 0)
+	{
+		printf("%s", st);
+	}
+	else
+	{
+		printf("(nil)");
+	}
+}
+
 void print_all(const char *const format, ...)
 {
+
+	op_t ops[] = {
+		{'c', printf_char},
+		{'i', printf_int},
+		{'f', printf_float},
+		{'s', printf_st}};
+
+	int i = 0;
+	int z = 0;
+	int a;
+	va_list args;
+
+	va_start(args, format);
+
+	a = strlen(format);
+
+	while (format[z] != '\0')
 	{
-		va_list args;
-		int i = 0;
-		int a;
-		char *s;
-
-		va_start(args, format);
-		i = 0;
-		a = strlen(format);
-		while (format[i] != '\0')
+		while (i < 4)
 		{
-			if (format[i] == 'c')
+			if (ops[i].opp == format[z])
 			{
-				printf("%c", va_arg(args, int));
-			}
-			else if (format[i] == 'i')
-			{
-				printf("%d", va_arg(args, int));
-			}
-			else if (format[i] == 'f')
-			{
-				printf("%f", va_arg(args, double));
-			}
-			else if (format[i] == 's')
-			{
-				s = va_arg(args, char *);
-				printf("%s", s ? s : "(nil)");
-			}
+				ops[i].f(args);
 
-			if (i < a - 1 && (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's'))
-			{
-				printf(", ");
+				if (i < a - 1)
+				{
+					printf(", ");
+				}
 			}
 			i++;
 		}
-		printf("\n");
-		va_end(args);
+		i = 0;
+		z++;
 	}
+	printf("\n");
+	va_end(args);
 }
