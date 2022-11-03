@@ -63,7 +63,7 @@ void print_all(const char *const format, ...)
 
 	va_start(args, format);
 
-	while (format[z] != '\0' && format != '\0')
+	while (format[z] != '\0' && format != 0)
 	{
 		a = strlen(format);
 		while (i < 4)
