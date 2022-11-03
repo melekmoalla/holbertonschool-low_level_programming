@@ -51,7 +51,7 @@ void print_all(const char *const format, ...)
 			{
 				ops[i].f(args);
 
-				if (i < a - 2)
+				if (z < a - 1)
 				{
 					printf(", ");
 				}
