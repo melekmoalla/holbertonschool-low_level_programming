@@ -43,7 +43,7 @@ void print_all(const char *const format, ...)
 
 	a = strlen(format);
 
-	while (format[z] != '\0')
+	while (format[z] != '\0' && format != NULL)
 	{
 		while (i < 4)
 		{
@@ -51,7 +51,7 @@ void print_all(const char *const format, ...)
 			{
 				ops[i].f(args);
 
-				if (i < a - 1)
+				if (i < a - 2)
 				{
 					printf(", ");
 				}
