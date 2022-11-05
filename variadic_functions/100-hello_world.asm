@@ -1,14 +1,13 @@
-        global    _start
+section .data
+    msg db 'Hello World'
+    len equ $ - msg
 
-          section   .text
-_start:   mov       rax, 1                  ; system call for write
-          mov       rdi, 1                  ; file handle 1 is stdout
-          mov       rsi, message            ; address of string to output
-          mov       rdx, 13                 ; number of bytes
-          syscall                           ; invoke operating system to do the write
-          mov       rax, 60                 ; system call for exit
-          xor       rdi, rdi                ; exit code 0
-          syscall                           ; invoke operating system to exit
+section .text
+    global _start
 
-          section   .data
-message:  db        "Hello, World", 10 
+_start:
+    MOV rdi, 1 ; stdin fd
+    MOV rsi, msg
+    MOV rdx, len
+    MOV rax, 1 ; write syscall
+    INT 0x80
