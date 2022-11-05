@@ -1,18 +1,14 @@
-global _start
+        global    _start
 
-section .text:
+          section   .text
+_start:   mov       rax, 1                  ; system call for write
+          mov       rdi, 1                  ; file handle 1 is stdout
+          mov       rsi, message            ; address of string to output
+          mov       rdx, 13                 ; number of bytes
+          syscall                           ; invoke operating system to do the write
+          mov       rax, 60                 ; system call for exit
+          xor       rdi, rdi                ; exit code 0
+          syscall                           ; invoke operating system to exit
 
-_start:
-  mov eax, 0x4      ; write(
-  mov ebx, 1        ;   STDOUT_FILENO,
-  mov ecx, msg      ;   "Hello, world\n",
-  mov edx, msglen   ;   sizeof("Hello, world!\n")
-  int 0x80           ; invoke
-
-  mov reax, 60       ; exit(
-  mov ebx, 0        ;   EXIT_SUCCESS
-  int 0x80           ; );
-
-section .data:
-  msg: db "Hello, world", 0xA
-  msglen: equ $ - msg
+          section   .data
+message:  db        "Hello, World", 10 
