@@ -1,18 +1,18 @@
 global _start
 
-section .text
+section .text:
 
 _start:
-  mov rax, 1        ; write(
-  mov rdi, 1        ;   STDOUT_FILENO,
-  mov rsi, msg      ;   "Hello, world!\n",
-  mov rdx, msglen   ;   sizeof("Hello, world!\n")
-  syscall           ; );
+  mov eax, 0x4      ; write(
+  mov ebx, 1        ;   STDOUT_FILENO,
+  mov ecx, msg      ;   "Hello, world\n",
+  mov edx, msglen   ;   sizeof("Hello, world!\n")
+  int 0x80           ; invoke
 
-  mov rax, 60       ; exit(
-  mov rdi, 0        ;   EXIT_SUCCESS
-  syscall           ; );
+  mov reax, 60       ; exit(
+  mov ebx, 0        ;   EXIT_SUCCESS
+  int 0x80           ; );
 
-section .rodata
-  msg: db "Hello, world!", 10
+section .data:
+  msg: db "Hello, world", 0xA
   msglen: equ $ - msg
