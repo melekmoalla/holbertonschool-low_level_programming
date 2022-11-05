@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	if ((argv[2][1] != '\0') ||
-		(*(get_op_func((argv[2]))) == NULL) ||
 		(argv[2] == NULL))
 	{
 		printf("Error\n");
@@ -36,7 +35,7 @@ int main(int argc, char *argv[])
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
 
-	index = get_op_func((argv[2]))(a, b);
+	index = (get_op_func((argv[2])))(a, b);
 	printf("%d\n", index);
 	return (0);
 }
