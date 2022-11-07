@@ -1,34 +1,21 @@
-  global _main
-    extern  _GetStdHandle@4
-    extern  _WriteFile@20
-    extern  _ExitProcess@4
+;---ASM Hello World Win64 MessageBox
 
-    section .text
-_main:
-    ; DWORD  bytes;    
-    mov     ebp, esp
-    sub     esp, 4
+extrn MessageBoxA: PROC
+extrn ExitProcess: PROC
 
-    ; hStdOut = GetstdHandle( STD_OUTPUT_HANDLE)
-    push    -11
-    call    _GetStdHandle@4
-    mov     ebx, eax    
+.data
+title db 'Win64', 0
+msg db 'Hello World!', 0
 
-    ; WriteFile( hstdOut, message, length(message), &bytes, 0);
-    push    0
-    lea     eax, [ebp-4]
-    push    eax
-    push    (message_end - message)
-    push    message
-    push    ebx
-    call    _WriteFile@20
-
-    ; ExitProcess(0)
-    push    0
-    call    _ExitProcess@4
-
-    ; never here
-    hlt
-message:
-    db      'Hello, World', 10
-message_end:
+.code
+main proc
+  sub rsp, 28h  
+  mov rcx, 0       ; hWnd = HWND_DESKTOP
+  lea rdx, msg     ; LPCSTR lpText
+  lea r8,  title   ; LPCSTR lpCaption
+  mov r9d, 0       ; uType = MB_OK
+  call MessageBoxA
+  add rsp, 28h  
+  mov ecx, eax     ; uExitCode = MessageBox(...)
+  call ExitProcess
+main endp
