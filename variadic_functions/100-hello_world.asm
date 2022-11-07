@@ -1,16 +1,34 @@
-section	.text
-   global _start     ;must be declared for linker (ld)
-	
-_start:	            ;tells linker entry point
-   mov	edx,len     ;message length
-   mov	ecx,msg     ;message to write
-   mov	ebx,1       ;file descriptor (stdout)
-   mov	eax,4       ;system call number (sys_write)
-   int	0x80        ;call kernel
-	
-   mov	eax,1       ;system call number (sys_exit)
-   int	0x80        ;call kernel
+  global _main
+    extern  _GetStdHandle@4
+    extern  _WriteFile@20
+    extern  _ExitProcess@4
 
-section	.data
-msg db 'Hello, world!', 0xa  ;string to be printed
-len equ $ - msg     ;length of the string
+    section .text
+_main:
+    ; DWORD  bytes;    
+    mov     ebp, esp
+    sub     esp, 4
+
+    ; hStdOut = GetstdHandle( STD_OUTPUT_HANDLE)
+    push    -11
+    call    _GetStdHandle@4
+    mov     ebx, eax    
+
+    ; WriteFile( hstdOut, message, length(message), &bytes, 0);
+    push    0
+    lea     eax, [ebp-4]
+    push    eax
+    push    (message_end - message)
+    push    message
+    push    ebx
+    call    _WriteFile@20
+
+    ; ExitProcess(0)
+    push    0
+    call    _ExitProcess@4
+
+    ; never here
+    hlt
+message:
+    db      'Hello, World', 10
+message_end:
