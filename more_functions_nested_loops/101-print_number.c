@@ -7,12 +7,12 @@
 
 void print_number(int n)
 {
-	unsigned s = n;
+	unsigned int s = n;
 	int a = 1;
 
 	if (n < 0)
 	{
-		putchar('-');
+		_putchar('-');
 		s = -s;
 	}
 	while ((s / a) >= 10)
@@ -21,9 +21,8 @@ void print_number(int n)
 	}
 	while (a != 0)
 	{
-		putchar((s / a) + '0');
+		_putchar((s / a) + '0');
 		s = s - (s / a) * a;
 		a = a / 10;
 	}
-	
 }
