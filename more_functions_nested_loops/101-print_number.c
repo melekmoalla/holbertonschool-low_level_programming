@@ -25,5 +25,5 @@ void print_number(int n)
 		s = s - (s / a) * a;
 		a = a / 10;
 	}
-	putchar('\n');
+	
 }
