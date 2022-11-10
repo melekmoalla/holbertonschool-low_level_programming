@@ -1,19 +1,26 @@
 #include <stdio.h>
 int main()
 {
-    int t1 = 1, t2 = 2, nextTerm = 1, n;
-    n = 50;
+    long int t1 = 1, t2 = 2, nextTerm = 0, i = 0;
 
-    printf("Fibonacci Series: %d, %d, ", t1, t2);
+    printf("%ld, %ld, ", t1, t2);
     nextTerm = t1 + t2;
 
-    while (nextTerm <= n)
+    while (i <= 47)
     {
-        printf("%d, ", nextTerm);
-        t1 = t2;
-        t2 = nextTerm;
-        nextTerm = t1 + t2;
+        if (i != 47)
+        {
+            printf("%ld, ", nextTerm);
+            t1 = t2;
+            t2 = nextTerm;
+            nextTerm = t1 + t2;
+        }
+        else
+        {
+            printf("%ld", nextTerm);
+        }
+        i++;
     }
-
+    printf("\n");
     return (0);
 }
