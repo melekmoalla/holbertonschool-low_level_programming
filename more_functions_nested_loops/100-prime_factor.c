@@ -9,8 +9,8 @@ int main(void)
 	long int n;
 
 	n = 612852475143;
-	
-	long int div = 2, maxFact;
+
+	unsigned int div = 2;
 
 	while (n != 0)
 	{
@@ -18,11 +18,10 @@ int main(void)
 			div = div + 1;
 		else
 		{
-			maxFact = n;
 			n = n / div;
 			if (n == 1)
 			{
-				printf("%ld", div);
+				printf("%d", div);
 				break;
 			}
 		}
