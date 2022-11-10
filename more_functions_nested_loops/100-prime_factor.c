@@ -10,7 +10,7 @@ int main(void)
 
 	n = 612852475143;
 
-	unsigned int div = 2;
+	int div = 2;
 
 	while (n != 0)
 	{
