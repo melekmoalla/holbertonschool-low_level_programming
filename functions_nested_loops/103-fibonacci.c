@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - fonction to print the first 50 fibonacci
+ * main - program that finds and prints the sum of the even-valued terms
  * Return: 0
  */
+
 int main(void)
 {
-    long int t1 = 1, t2 = 2, nextTerm = 0, i = 0;
+	int limit = 4000000;
+	int sum = 0;
+	int a = 1;
+	int b = 1;
+	int c = a + b;
+	while (c < limit)
+	{
 
-    nextTerm = t1 + t2;
-
-    while (i <= 7)
-    {
-
-        t1 = t2;
-        t2 = nextTerm;
-        nextTerm = t1 + t2;
-
-        i++;
-    }
-    printf("%ld", nextTerm);
-    printf("\n");
-    return (0);
+		sum += c;
+		a = b + c;
+		b = c + a;
+		c = a + b;
+	}
+	printf("%d\n", sum);
+	return (0);
 }
