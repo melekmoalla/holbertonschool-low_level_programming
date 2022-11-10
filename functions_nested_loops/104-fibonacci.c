@@ -1,31 +1,32 @@
 #include <stdio.h>
-
 /**
- * main - fonction to print the first 50 fibonacci
- * Return: 0
+ * main - Entry point
+ *
+ * Description: program that finds and prints the first 98 Fibonacci
+ *              numbers, starting with 1 and 2
+ *
+ * Return: Always 0 successful
  */
 int main(void)
 {
-    long int t1 = 1, t2 = 2, nextTerm = 0, i = 0;
+	unsigned long int t0 = 0, t1 = 1, s;
 
-    printf("%ld, %ld, ", t1, t2);
-    nextTerm = t1 + t2;
+	int i;
 
-    while (i <= 97)
-    {
-        if (i != 97)
-        {
-            printf("%ld, ", nextTerm);
-            t1 = t2;
-            t2 = nextTerm;
-            nextTerm = t1 + t2;
-        }
-        else
-        {
-            printf("%ld", nextTerm);
-        }
-        i++;
-    }
-    printf("\n");
-    return (0);
+	for (i = 1; i <= 98; i++)
+	{
+		s = t0 + t1;
+
+		if (i != 98)
+		{
+			printf("%lu, ", s);
+		}
+		else
+		{
+			printf("%lu\n", s);
+		}
+		t0 = t1;
+		t1 = s;
+	}
+	return (0);
 }
