@@ -4,14 +4,15 @@
  * main -  prints the largest prime factor of the number 612852475143$
  * Return: 0
  */
-int main()
+
+int main(void)
 {
 	long int n;
 	int div = 0;
 
 	n = 612852475143;
 	div = 2;
-	
+
 	while (n != 0)
 	{
 		if (n % div != 0)
