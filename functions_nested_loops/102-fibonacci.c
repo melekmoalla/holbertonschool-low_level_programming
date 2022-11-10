@@ -4,7 +4,7 @@
  * main - fonction to print the first 50 fibonacci
  * Return: 0
  */
-int main(vid)
+int main(void)
 {
 	long int t1 = 1, t2 = 2, nextTerm = 0, i = 0;
 
