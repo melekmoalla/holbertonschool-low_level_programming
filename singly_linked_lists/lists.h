@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * struct list_s - struct typdef
+*/
 typedef struct list_s
 {
 	char *str;
