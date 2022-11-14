@@ -5,10 +5,12 @@
 #include <stdlib.h>
 
 /**
- * print_list - function that prints all the elements of a list_t list.
- * @h: const list_t
- * Return: count
+ * add_node - adds a new node at the beginning of a list_t list
+ * @head: first node in the list
+ * @str: second node in the list
+ * Return: the address of the new element, or NULL if it failed
  */
+
 
 list_t *add_node(list_t **head, const char *str)
 {
