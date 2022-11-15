@@ -27,15 +27,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	else
 	{
 		tail = *head;
-		while (1)
+		while (tail->next != NULL)
 		{
-			if (tail->next == NULL)
-			{
-				tail->next = new;
-				break;
-			}
 			tail = tail->next;
 		}
+		tail->next = new;
 	}
 	return (new);
 }
