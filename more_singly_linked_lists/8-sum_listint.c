@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * sum_listint - deletes the head node of a listint_t linked list
+ * sum_listint - returns the sum of all the data (n) of a listint_t linked list
  * @head: linked list to free
  * Return: sum
  */
