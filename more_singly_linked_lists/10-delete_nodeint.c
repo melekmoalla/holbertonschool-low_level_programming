@@ -27,6 +27,10 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	{
 		while (index)
 		{
+			if (!head)
+			{
+				return (NULL);
+			}
 			perv = c;
 			c = c->next;
 			index--;
@@ -37,4 +41,3 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	return (1);
 }
-
