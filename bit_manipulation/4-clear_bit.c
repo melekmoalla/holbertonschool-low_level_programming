@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit - function returns the number of elements in a linked list_t list
+ * clear_bit - function returns the number of elements in a linked list_t list
  * @n: unsigned long int
  * @index: unsigned int
  * Return: 1 or (-1 if is fail)
