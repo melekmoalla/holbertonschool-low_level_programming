@@ -4,29 +4,29 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - deletes the head node of a listint_t linked list
+ * reverse_listint -  function that reverses a listint_t linked list.
  * @head: linked list to free
- * @index: unsigned int
- * Return: none
+ * Return: the first thing head
  */
 
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *prev;
-	listint_t *current;
-	listint_t *next;
 
-	current = *head;
-	while (current != NULL)
+	listint_t *prev = NULL, *next_node = NULL;
+
+	while ((*head))
+
 	{
 
-		next = current->next;
+		next_node = (*head)->next;
 
-		current->next = prev;
+		(*head)->next = prev;
 
-		prev = current;
-		current = next;
+		prev = (*head);
+
+		(*head) = next_node;
 	}
 	*head = prev;
 	return (*head);
 }
+
