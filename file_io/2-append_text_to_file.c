@@ -16,20 +16,26 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *fp;
+	int fp, i, b;
 
-	if (!filename)
+	fp = open(filename, O_WRONLY);
+	if (fp == -1)
 	{
 		return (-1);
 	}
-	fp = fopen(filename, "a");
-	if (fp == NULL)
+	if (text_content)
 	{
-		return (-1);
+		while (text_content[i])
+		{
+			i++;
+		}
+		b = write(fp, text_content, i);
+		if (b == -1)
+		{
+			return (-1);
+		}
 	}
-	fprintf(fp, "%s\n", text_content);
-
-	fclose(fp);
+	close(fp);
 
 	return (1);
 }
