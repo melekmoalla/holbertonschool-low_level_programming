@@ -17,23 +17,21 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    FILE *s;
-    char c;
-    size_t i = 0;
-
-    if (filename == NULL)
-        return (0);
-    s = fopen(filename, "r");
-    if (s == NULL)
-        return (0);
-    while ((c = fgetc(s)) != EOF)
+    int m, a;
+    char *c;
+    c = malloc(sizeof(char *) * letters);
+    if (c == NULL)
     {
-        printf("%c", c);
-        i++;
-        if (i == letters)
-            break;
+        return (0);
     }
 
-    fclose(s);
-    return (i);
+    m = open(filename, O_RDONLY, 1000000);
+    if (m == -1)
+        return (0);
+    a = read(m, c, letters);
+    write(STDOUT_FILENO, c, a);
+
+    free(c);
+    close(m);
+    return (a);
 }
