@@ -31,9 +31,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	a = read(m, c, letters);
 	if (a == -1)
 		return (-1);
-	for (i = 0; i < a; i++)
+	for (i = 0; i < a - 1; i++)
 	{
-		printf("%s", c[i]);
+		printf("%c", c[i]);
 	}
 
 	free(c);
