@@ -7,31 +7,34 @@
 #include <stdlib.h>
 #include <string.h>
 
-/* Read file 'filename' into character buffer 'text'.
- *
- * @param filename file to read from
- * @param text character buffer to read into
- *
- * @return the number of bytes read.
+/**
+ *  read_textfile - Read file 'filename' into character buffer 'text'
+ * @filename: file to read from
+ * @letters: character buffer to read into
+ * Return: the number of bytes read.
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-    int m, a;
-    char *c;
-    c = malloc(sizeof(char *) * letters);
-    if (c == NULL)
-    {
-        return (0);
-    }
+	int m, a, i;
+	char *c;
 
-    m = open(filename, O_RDONLY, 1000000);
-    if (m == -1)
-        return (0);
-    a = read(m, c, letters);
-    write(STDOUT_FILENO, c, a);
+	c = malloc(sizeof(char *) * letters);
+	if (c == NULL)
+	{
+		return (0);
+	}
 
-    free(c);
-    close(m);
-    return (a);
+	m = open(filename, O_RDONLY, 0600);
+	if (m == -1)
+		return (0);
+	a = read(m, c, letters);
+	for (i = 0; i < a; i++)
+	{
+		printf("%c", c[i]);
+	}
+
+	free(c);
+	close(m);
+	return (a);
 }
