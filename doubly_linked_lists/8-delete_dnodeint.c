@@ -26,30 +26,27 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		(*head)->prev = NULL;
 		return (1);
 	}
+	while (i < index)
+	{
+		if (!pos)
+			return (-1);
+		pos = pos->next;
+		i++;
+	}
+	if (pos->next == NULL)
+	{
+		fr = pos;
+		pos = pos->prev;
+		pos->next = NULL;
+		free(fr);
+	}
 	else
 	{
-		while (i < index)
-		{
-			if (!pos)
-				return (-1);
-			pos = pos->next;
-			i++;
-		}
-		if (pos->next == NULL)
-		{
-			fr = pos;
-			pos = pos->prev;
-			pos->next = NULL;
-			free(fr);
-		}
-		else
-		{
-			fr = pos;
-			pos->prev->next = pos->next;
-			pos->next->prev = pos->prev;
-			free(fr);
-			fr = NULL;
-		}
-		return (1);
+		fr = pos;
+		pos->prev->next = pos->next;
+		pos->next->prev = pos->prev;
+		free(fr);
+		fr = NULL;
 	}
+	return (1);
 }
