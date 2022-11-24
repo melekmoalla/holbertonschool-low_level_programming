@@ -23,6 +23,12 @@ hash_node_t *hot9odam(hash_node_t *new, const char *key, const char *value)
 	hash_node_t *a = new;
 	while (a)
 	{
+		if (strcmp(key, a->key) == 0)
+		{
+			free(a->value);
+			a->value = strdup(value);
+			return (new);
+		}
 		a = a->next;
 	}
 	a = jdida(new);
