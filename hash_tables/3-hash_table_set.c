@@ -13,11 +13,18 @@ hash_node_t *jdida(__attribute__((unused)) hash_node_t *c)
 	}
 	new->key = NULL;
 	new->value = NULL;
-	new->next = NULL;
+	new->next = c;
 
 	return (new);
 }
 
+hash_node_t *hot9odam(hash_node_t *new, const char *key, const char *value)
+{
+	new = jdida(new);
+	new->key = strdup(key);
+	new->key = strdup(value);
+	return (new);
+}
 /**
  * main - check the code for Holberton School students.
  *
@@ -38,6 +45,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (new == NULL)
 	{
 		new = jdida(NULL);
+	}
+	if (new->key)
+	{
+		ht->array[index] = hot9odam(new, key, value);
+		return (1);
 	}
 	new->key = strdup(key);
 	new->value = strdup(value);
