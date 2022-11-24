@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
+/**
+ * jdida - function that add a new node of the index array
+ *@c: hash_node_t
+ * Return: new
+ */
 hash_node_t *jdida(hash_node_t *c)
 {
 	hash_node_t *new;
@@ -18,9 +23,17 @@ hash_node_t *jdida(hash_node_t *c)
 	return (new);
 }
 
+/**
+ *hot9odam - the fonction that add another noder withe the olde node
+ *@new:hash_node_t
+ *@key: const char
+ *@value: const char
+ * Return: a or new if the key of the new  ==key of the old new
+ */
 hash_node_t *hot9odam(hash_node_t *new, const char *key, const char *value)
 {
 	hash_node_t *a = new;
+
 	while (a)
 	{
 		if (strcmp(key, a->key) == 0)
@@ -38,9 +51,11 @@ hash_node_t *hot9odam(hash_node_t *new, const char *key, const char *value)
 }
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * hash_table_set -  function that adds an element to the hash table.
+ *@ht:hash_node_t
+ *@key: const char
+ *@value: const char
+ * Return: 1 or 0 if fail
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
