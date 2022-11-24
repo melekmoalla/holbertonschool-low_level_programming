@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
-hash_node_t *jdida(__attribute__((unused)) hash_node_t *c)
+hash_node_t *jdida(hash_node_t *c)
 {
 	hash_node_t *new;
 
