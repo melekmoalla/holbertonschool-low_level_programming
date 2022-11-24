@@ -2,8 +2,6 @@
 
 /**
  * key_index - function that gives you the index of a key.
-
-
  *@key: const unsigned char
  *@size: unsigned long int
  *Return: d
