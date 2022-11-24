@@ -6,7 +6,7 @@ hash_node_t *jdida(hash_node_t *c)
 {
 	hash_node_t *new;
 
-	new = malloc(sizeof(hash_table_t));
+	new = malloc(sizeof(hash_node_t));
 	if (!new)
 	{
 		return (NULL);
@@ -20,11 +20,17 @@ hash_node_t *jdida(hash_node_t *c)
 
 hash_node_t *hot9odam(hash_node_t *new, const char *key, const char *value)
 {
-	new = jdida(new);
-	new->key = strdup(key);
-	new->key = strdup(value);
-	return (new);
+	hash_node_t *a = new;
+	while (a)
+	{
+		a = a->next;
+	}
+	a = jdida(new);
+	a->key = strdup(key);
+	a->value = strdup(value);
+	return (a);
 }
+
 /**
  * main - check the code for Holberton School students.
  *
