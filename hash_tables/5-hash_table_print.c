@@ -8,6 +8,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i, a = 0;
 	hash_node_t *p;
 
+	if (ht == NULL)
+		return;
 	printf("{");
 	for (i = 0; ht && i < ht->size; i++)
 	{
