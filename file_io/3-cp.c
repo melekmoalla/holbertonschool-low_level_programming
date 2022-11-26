@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
 
     if (argc != 3)
     {
-        printf("Usage: cp file_from file_to\n");
+        char *msg = ("Usage: cp file_from file_to\n");
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
         exit(97);
     }
     /*
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
     }
     if (destFile == NULL)
     {
-        char *m = ("Error: Can't write to ,NAME_OF_THE_FILE\n");
+        char *m = ("Error: Can't write to NAME_OF_THE_FILE\n");
         int len = strlen(m);
         write(STDERR_FILENO, m, len);
         exit(99);
