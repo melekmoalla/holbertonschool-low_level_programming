@@ -26,14 +26,14 @@ int main(int argc, char *argv[])
     /* fopen() return NULL if unable to open file in given mode. */
     if (sourceFile == NULL)
     {
-        char *msg = "Error: Can't read to NAME_OF_THE_FILE\n";
+        char *msg = "Error: Can't read to %s\n", argv[1];
         int len = strlen(msg);
         write(STDERR_FILENO, msg, len);
         exit(98);
     }
     if (destFile == NULL)
     {
-        char *msg = "Error: Can't write to NAME_OF_THE_FILE\n";
+        char *msg = "Error: Can't write to %s\n", argv[2];
         int len = strlen(msg);
         write(STDERR_FILENO, msg, len);
         exit(99);
