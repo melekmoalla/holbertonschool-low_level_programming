@@ -9,9 +9,12 @@ int main(int argc, char *argv[])
     FILE *sourceFile;
     FILE *destFile;
 
+    int count;
+
     if (argc != 3)
     {
-        exit(98);
+        printf("Usage: cp file_from file_to\n");
+        exit(97);
     }
     /*
      * Open source file in 'r' and
@@ -21,13 +24,20 @@ int main(int argc, char *argv[])
     destFile = fopen(argv[2], "w");
 
     /* fopen() return NULL if unable to open file in given mode. */
-    if (sourceFile == NULL || destFile == NULL)
+    if (sourceFile == NULL)
     {
-        /* Unable to open file hence exit */
+        printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+        exit(98);
+    }
+    if (destFile == NULL)
+    {
+        printf("Error: Can't write to NAME_OF_THE_FILE\n");
         exit(99);
     }
 
-    fcpy(sourceFile, destFile);
+    count = fcpy(sourceFile, destFile);
+    printf("\nFiles copied successfully.\n");
+    printf("%d characters copied.\n", count);
 
     /* Finally close files to release resources */
     fclose(sourceFile);
