@@ -33,8 +33,6 @@ int main(int argc, char *argv[])
     }
 
     count = fcpy(sourceFile, destFile);
-    printf("\nFiles copied successfully.\n");
-    printf("%d characters copied.\n", count);
 
     /* Finally close files to release resources */
     fclose(sourceFile);
