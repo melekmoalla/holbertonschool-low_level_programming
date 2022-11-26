@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
     FILE *sourceFile;
     FILE *destFile;
 
-    int count;
 
     if (argc != 3)
     {
