@@ -61,5 +61,5 @@ int main(int argc, char *argv[])
         write(STDERR_FILENO, msg, len);
         exit(100);
     }
-    exit(100);
+    exit(0);
 }
