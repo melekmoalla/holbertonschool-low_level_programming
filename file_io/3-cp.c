@@ -29,13 +29,13 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	z = read(fa, c, 200000);
-	if (z == -1)
+	if (z < -0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		return (98);
 	}
 	q = write(fb, c, z);
-	if (q < 0 || !c[200000])
+	if (q < 0 || !*c)
 	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		exit(99);
