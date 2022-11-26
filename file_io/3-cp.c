@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     /* Finally close files to release resources */
     a = fclose(sourceFile);
     b = fclose(destFile);
-    if (a == 0 || b == 0)
+    if (a == -1 || b == -1)
     {
         char *msg = "Error: Can't close fd FD_VALUE\n";
         int len = strlen(msg);
