@@ -24,10 +24,7 @@ int main(int argc, char *argv[])
     if (sourceFile == NULL || destFile == NULL)
     {
         /* Unable to open file hence exit */
-        printf("\nUnable to open file.\n");
-        printf("Please check if file exists and you have read/write privilege.\n");
-
-        exit(EXIT_FAILURE);
+        exit(99);
     }
 
     fcpy(sourceFile, destFile);
