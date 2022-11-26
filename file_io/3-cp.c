@@ -5,11 +5,10 @@
  * @argv:argv
  * Return: 0
  */
-void write_fonct(char *r, int fb, int z, char *c);
 
 int main(int argc, char *argv[])
 {
-	int fa, fb, a, b, z;
+	int fa, fb, a, b, z, q;
 	char c[1024];
 
 	if (argc != 3)
@@ -32,11 +31,15 @@ int main(int argc, char *argv[])
 	z = read(fa, c, 20000);
 	if (z == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	write_fonct(argv[2], fb, z, c);
-
+	q = write(fb, c, z);
+	if (q == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", argv[2]);
+		exit(99);
+	}
 	a = close(fa);
 	b = close(fb);
 	if (a == -1 || b == -1)
@@ -45,16 +48,4 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 	return (0);
-}
-
-void write_fonct(char *r, int fb, int z, char *c)
-{
-	int q;
-
-	q = write(fb, c, z);
-	if (q == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
-		exit(99);
-	}
 }
