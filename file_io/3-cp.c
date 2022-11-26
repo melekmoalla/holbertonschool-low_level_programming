@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     }
     if (destFile == NULL)
     {
-        char *m = "Error: Can't write to NAME_OF_THE_FILE\n", argv[2];
+        char *m = ("Error: Can't write to ,NAME_OF_THE_FILE\n");
         int len = strlen(m);
         write(STDERR_FILENO, m, len);
         exit(99);
