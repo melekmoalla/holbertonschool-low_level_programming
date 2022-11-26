@@ -21,6 +21,11 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fa = open(argv[1], O_RDONLY, 0654);
+	if (fb == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
+		exit(98);
+	}
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while (1)
 	{
@@ -43,11 +48,6 @@ int read_fonct(char *r, int fb, char *c)
 {
 	int a;
 
-	if (fb == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
-		exit(98);
-	}
 	a = read(fb, c, 20000);
 	if (a == -1)
 	{
