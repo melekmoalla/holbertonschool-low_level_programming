@@ -8,7 +8,7 @@
 
 int read_fonct(char *r, int fb, char *c);
 
-void write_fonct(char *r, int fb, int z, char *c);
+int write_fonct(char *r, int fb, int z, char *c);
 
 int main(int argc, char *argv[])
 {
@@ -52,7 +52,7 @@ int read_fonct(char *r, int fb, char *c)
 	return (a);
 }
 
-void write_fonct(char *r, int fb, int z, char *c)
+int write_fonct(char *r, int fb, int z, char *c)
 {
 	int q;
 
@@ -67,4 +67,5 @@ void write_fonct(char *r, int fb, int z, char *c)
 		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
 		exit(99);
 	}
+	return (0);
 }
