@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     /* fopen() return NULL if unable to open file in given mode. */
     if (sourceFile == NULL)
     {
-        char *msg = (" Can't read from file test_folder/textfile_does_not_exist\n");
+        char *msg = ("Error: Can't read from file test_folder/textfile_does_not_exist\n");
         int len = strlen(msg);
         write(STDERR_FILENO, msg, len);
         exit(98);
