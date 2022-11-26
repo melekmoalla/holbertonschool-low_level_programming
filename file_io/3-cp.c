@@ -39,12 +39,18 @@ int main(int argc, char *argv[])
     z = read(fa, c, 10000000000000);
     if (z == -1)
     {
-        return (0);
+        char *msg = "Error: Can't read from file test_folder/textfile_0\n";
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
+        return (98);
     }
     d = write(fb, c, z);
     if (d == -1)
     {
-        return (0);
+        char *msg = "Error: Can't write to test_folder/textfile_0_copy_\n";
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
+        return (99);
     }
     a = close(fa);
     b = close(fb);
