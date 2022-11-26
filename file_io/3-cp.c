@@ -26,9 +26,7 @@ int main(int argc, char *argv[])
     /* fopen() return NULL if unable to open file in given mode. */
     if (sourceFile == NULL)
     {
-        char *msg = "Error: Can't write to NAME_OF_THE_FILE";
-        int len = strlen(msg);
-        write(STDERR_FILENO, msg, len);
+        printf("Error: Can't read from file NAME_OF_THE_FILE\n");
         exit(98);
     }
     if (destFile == NULL)
@@ -44,7 +42,9 @@ int main(int argc, char *argv[])
     b = fclose(destFile);
     if (a == -1 || b == -1)
     {
-        printf("Error: Can't close fd FD_VALUE");
+        char *msg = "Error: Can't close fd FD_VALUE\n";
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
         exit(100);
     }
 
