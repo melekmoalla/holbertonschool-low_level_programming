@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     FILE *sourceFile;
     FILE *destFile;
 
-    int count;
+    int  a, b;
 
     if (argc != 3)
     {
@@ -35,13 +35,21 @@ int main(int argc, char *argv[])
         exit(99);
     }
 
-    count = fcpy(sourceFile, destFile);
-    printf("\nFiles copied successfully.\n");
-    printf("%d characters copied.\n", count);
+    fcpy(sourceFile, destFile);
 
     /* Finally close files to release resources */
-    fclose(sourceFile);
-    fclose(destFile);
+    a = fclose(sourceFile);
+    if (a == -1)
+    {
+        printf("Error: Can't close fd FD_VALUE");
+        exit(100);
+    }
+    b = fclose(destFile);
+    if (b == -1)
+    {
+        printf("Error: Can't close fd FD_VALUE");
+        exit(100);
+    }
 
     return 0;
 }
