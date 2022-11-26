@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 100);
+		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
 		exit(97);
 	}
 
@@ -27,19 +27,19 @@ int main(int argc, char *argv[])
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fb == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n", 100);
+		write(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n", 50);
 		exit(99);
 	}
 	z = read(fa, c, 10000000000000);
 	if (z == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't read from file test_folder/textfile_0\n", 100);
+		write(STDERR_FILENO, "Error: Can't read from file test_folder/textfile_0\n", 51);
 		return (98);
 	}
 	d = write(fb, c, z);
 	if (d == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't write to test_folder/textfile_0_copy_3\n", 100);
+		write(STDERR_FILENO, "Error: Can't write to test_folder/textfile_0_copy_3\n", 52);
 		return (99);
 	}
 	a = close(fa);
