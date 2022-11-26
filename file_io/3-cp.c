@@ -2,52 +2,52 @@
 #include <stdlib.h>
 #include "main.h"
 
-#define NAME_OF_THE_FILE argv[2];
-
-int fcpy(FILE *sourceFile, FILE *destFile);
-
 int main(int argc, char *argv[])
 {
-    FILE *sourceFile;
-    FILE *destFile;
-
-    int a, b;
+    int fa, fb, a, b, z, d;
+    char *c;
 
     if (argc != 3)
     {
-        char *msg = ("Usage: cp file_from file_to\n");
+        char *msg = "Usage: cp file_from file_to\n";
         int len = strlen(msg);
         write(STDERR_FILENO, msg, len);
         exit(97);
     }
-    /*
-     * Open source file in 'r' and
-     * destination file in 'w' mode
-     */
-    sourceFile = fopen(argv[1], "r");
-    destFile = fopen(argv[2], "w");
 
-    /* fopen() return NULL if unable to open file in given mode. */
-    if (sourceFile == NULL)
+    fa = open(argv[1], O_RDONLY, 600);
+    if (fa == -1)
     {
-        char *msg = ("Error: Can't read from file test_folder/textfile_does_not_exist\n");
+        char *msg = "Error: Can't read from file NAME_OF_THE_FILE\n";
         int len = strlen(msg);
         write(STDERR_FILENO, msg, len);
         exit(98);
     }
-    if (destFile == NULL)
+    c = malloc(sizeof(char *) * fa);
+    if (c == NULL)
     {
-        char *m = ("Error: Can't write to test_folder/textfile_2_copy\n");
-        int len = strlen(m);
-        write(STDERR_FILENO, m, len);
+        return (0);
+    }
+    fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    if (fb == -1)
+    {
+        char *msg = "Error: Can't write to NAME_OF_THE_FILE\n";
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
         exit(99);
     }
-
-    fcpy(sourceFile, destFile);
-
-    /* Finally close files to release resources */
-    a = fclose(sourceFile);
-    b = fclose(destFile);
+    z = read(fa, c, 1000);
+    if (z == -1)
+    {
+        return (0);
+    }
+    d = write(fb, c, z);
+    if (d == -1)
+    {
+        return (0);
+    }
+    a = close(fa);
+    b = close(fb);
     if (a == -1 || b == -1)
     {
         char *msg = "Error: Can't close fd FD_VALUE\n";
@@ -55,31 +55,5 @@ int main(int argc, char *argv[])
         write(STDERR_FILENO, msg, len);
         exit(100);
     }
-
-    return 0;
-}
-
-/**
- * Copy file contents character by charcter from
- * one file to another.
- * It return total character copied count.
- *
- * @sourceFile  Pointer to source FILE.
- * @destFile    Pointer to destination FILE.
- */
-int fcpy(FILE *sourceFile, FILE *destFile)
-{
-    int count = 0;
-    char ch;
-
-    /* Copy file contents character by character. */
-    while ((ch = fgetc(sourceFile)) != EOF)
-    {
-        fputc(ch, destFile);
-
-        /* Increment character copied count */
-        count++;
-    }
-
-    return count;
+    return (0);
 }
