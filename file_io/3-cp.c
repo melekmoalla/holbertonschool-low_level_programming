@@ -7,7 +7,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int fa, fb, a, b, z;
+	int fa, fb, z;
 	char c[200000];
 
 	if (argc != 3)
@@ -43,8 +43,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	a = close(fa), b = close(fb);
-	if (a == -1 || b == -1)
+	if (close(fa) == -1 || close(fb) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
