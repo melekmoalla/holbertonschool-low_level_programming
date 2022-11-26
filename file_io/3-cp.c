@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int fa, fb, z;
-	char c[200000];
+	char c[200000], *g;
 
 	if (argc != 3)
 	{
@@ -27,7 +27,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fb == 0)
+	g = argv[2];
+	if (access(g, W_OK) == 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(98);
