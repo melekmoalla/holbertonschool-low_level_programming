@@ -66,7 +66,7 @@ int write_fonct(char *r, int fb, int z, char *c)
 		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
 		exit(99);
 	}
-	q = write(fb, c, z, 20000);
+	q = write(fb, c, z);
 	if (q == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
