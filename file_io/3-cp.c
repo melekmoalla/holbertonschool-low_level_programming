@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 	if (q == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
+		exit(99);
 		return (99);
 	}
 	a = close(fa);
