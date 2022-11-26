@@ -1,4 +1,14 @@
 #include "main.h"
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <errno.h>
+#include <unistd.h>
+#include <fcntl.h>
 /**
  *  main - fonction copy
  * @argc: int
