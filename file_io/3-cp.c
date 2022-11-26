@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	z = read(fa, c, 200000);
-	if (z < 0)
+	if (z == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		return (98);
