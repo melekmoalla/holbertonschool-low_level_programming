@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int fa, fb, a, b, z, q;
-	char c[1024];
+	char c[200000];
 
 	if (argc != 3)
 	{
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
 		exit(98);
 	}
-	z = read(fa, c, 20000);
+	z = read(fa, c, 200000);
 	if (z == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
