@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	if (strcmp(argv[2], " "))
+	if (strcmp(argv[2], " ") == 0)
 	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		exit(99);
