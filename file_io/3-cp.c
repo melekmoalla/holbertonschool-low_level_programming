@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
 	if (z == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		return(98);
+		return (98);
 	}
 	q = write(fb, c, z);
 	if (q == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
-		return(99);
+		return (99);
 	}
 	a = close(fa);
 	b = close(fb);
