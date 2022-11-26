@@ -42,15 +42,15 @@ int main(int argc, char *argv[])
         char *msg = "Error: Can't read from file test_folder/textfile_0\n";
         int len = strlen(msg);
         write(STDERR_FILENO, msg, len);
-        return (98);
+        exit(98);
     }
     d = write(fb, c, z);
     if (d == -1)
     {
-        char *m = "EError: Can't write to test_folder/textfile_0_copy_3\n";
-        int len = strlen(m);
-        write(STDERR_FILENO, m, len);
-        return (99);
+        char *msg = "Error: Can't read from file test_folder/textfile_0\n";
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
+        exit(98);
     }
     a = close(fa);
     b = close(fb);
