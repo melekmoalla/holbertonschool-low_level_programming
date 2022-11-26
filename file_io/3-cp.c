@@ -5,10 +5,9 @@
  * @argv:argv
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
-	int fa, fb, a, b, z, q;
+	int fa, fb, a, b, z;
 	char c[200000];
 
 	if (argc != 3)
@@ -39,14 +38,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	q = write(fb, c, z);
-	if (q == -1)
+	if ((write(fb, c, z)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
-	a = close(fa);
-	b = close(fb);
+	a = close(fa), b = close(fb);
 	if (a == -1 || b == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
