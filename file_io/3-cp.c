@@ -27,6 +27,11 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fb == 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(98);
+	}
 	if (fb == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[2]);
@@ -34,15 +39,18 @@ int main(int argc, char *argv[])
 	}
 	z = read(fa, c, 200000);
 	if (z == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if ((write(fb, c, z)) == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	if (close(fa) == -1 || close(fb) == -1)
-	{dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
 	return (0);
