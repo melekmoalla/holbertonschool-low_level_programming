@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	}
 	if (strcmp(argv[2], "") == 0)
 	{
-		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	fa = open(argv[1], O_RDONLY, 0654);
