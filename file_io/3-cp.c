@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     {
         return (0);
     }
-    fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0600);
+    fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0661);
     if (fb == -1)
     {
         char *msg = "Error: Can't write to NAME_OF_THE_FILE\n";
