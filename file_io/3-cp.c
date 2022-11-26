@@ -9,11 +9,11 @@ int main(int argc, char *argv[])
     FILE *sourceFile;
     FILE *destFile;
 
-    int  a, b;
+    int a, b;
 
     if (argc != 3)
     {
-        printf("Usage: cp file_from file_to\n");
+        dprintf("Usage: cp file_from file_to\n");
         exit(97);
     }
     /*
@@ -26,7 +26,9 @@ int main(int argc, char *argv[])
     /* fopen() return NULL if unable to open file in given mode. */
     if (sourceFile == NULL)
     {
-        printf("Error: Can't read from file NAME_OF_THE_FILE\n");
+        char *msg = "Error: Can't write to NAME_OF_THE_FILE";
+        int len = strlen(msg);
+        write(STDERR_FILENO, msg, len);
         exit(98);
     }
     if (destFile == NULL)
@@ -39,13 +41,8 @@ int main(int argc, char *argv[])
 
     /* Finally close files to release resources */
     a = fclose(sourceFile);
-    if (a == -1)
-    {
-        printf("Error: Can't close fd FD_VALUE");
-        exit(100);
-    }
     b = fclose(destFile);
-    if (b == -1)
+    if (a == -1 || b == -1)
     {
         printf("Error: Can't close fd FD_VALUE");
         exit(100);
