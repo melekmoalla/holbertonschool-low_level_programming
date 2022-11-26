@@ -47,9 +47,9 @@ int main(int argc, char *argv[])
     d = write(fb, c, z);
     if (d == -1)
     {
-        char *msg = "Error: Can't write to test_folder/textfile_0_copy_\n";
-        int len = strlen(msg);
-        write(STDERR_FILENO, msg, len);
+        char *m = "EError: Can't write to test_folder/textfile_0_copy_3\n";
+        int len = strlen(m);
+        write(STDERR_FILENO, m, len);
         return (99);
     }
     a = close(fa);
