@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         write(STDERR_FILENO, msg, len);
         exit(99);
     }
-    z = read(fa, c, 1000);
+    z = read(fa, c, 10000000000000);
     if (z == -1)
     {
         return (0);
