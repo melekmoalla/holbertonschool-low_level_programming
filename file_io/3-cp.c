@@ -44,8 +44,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 	if (close(fa) == -1 || close(fb) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+	{dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
 	return (0);
