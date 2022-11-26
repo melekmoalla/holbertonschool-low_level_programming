@@ -9,7 +9,6 @@ int main(int argc, char *argv[])
     FILE *sourceFile;
     FILE *destFile;
 
-
     if (argc != 3)
     {
         exit(98);
@@ -31,7 +30,7 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
-    count = fcpy(sourceFile, destFile);
+    fcpy(sourceFile, destFile);
 
     /* Finally close files to release resources */
     fclose(sourceFile);
