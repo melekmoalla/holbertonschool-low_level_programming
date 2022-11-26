@@ -22,8 +22,13 @@ int main(int argc, char *argv[])
 	}
 	fa = open(argv[1], O_RDONLY, 0654);
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	z = read_fonct(argv[1], fa, c);
-	write_fonct(argv[2], fb, z, c);
+	while (1)
+	{
+		z = read_fonct(argv[1], fa, c);
+		if (!z)
+			break;
+		write_fonct(argv[2], fb, z, c);
+	}
 	a = close(fa);
 	b = close(fb);
 	if (a == -1 || b == -1)
@@ -61,7 +66,7 @@ int write_fonct(char *r, int fb, int z, char *c)
 		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
 		exit(99);
 	}
-	q = write(fb, c, z);
+	q = write(fb, c, z, 20000);
 	if (q == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
