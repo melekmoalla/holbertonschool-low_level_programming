@@ -43,7 +43,7 @@ int read_fonct(char *r, int fb, char *c)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
 		exit(98);
 	}
-	a = read(fb, c, 1024);
+	a = read(fb, c, 20000);
 	if (a == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
