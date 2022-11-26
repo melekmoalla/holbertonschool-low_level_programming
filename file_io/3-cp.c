@@ -1,53 +1,70 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
+/**
+ *  main - fonction copy
+ * @argc: int
+ * @argv:argv
+ * Return: 0
+ */
+
+int read_fonct(char *r, int fb, char *c);
+
+void write_fonct(char *r, int fb, int z, char *c);
 
 int main(int argc, char *argv[])
 {
-	int fa, fb, a, b, z, d;
-	char *c;
+	int fa, fb, a, b, z;
+	char c[1024];
 
 	if (argc != 3)
 	{
-		write(STDERR_FILENO, "Usage: cp file_from file_to\n", 28);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-
 	fa = open(argv[1], O_RDONLY, 0654);
-	if (fa == -1)
-	{
-		write(STDERR_FILENO, "Error: Can't read from file NAME_OF_THE_FILE\n", 100);
-		exit(98);
-	}
-	c = malloc(sizeof(char *) * fa);
-	if (c == NULL)
-	{
-		return (0);
-	}
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fb == -1)
-	{
-		write(STDERR_FILENO, "Error: Can't write to NAME_OF_THE_FILE\n", 50);
-		exit(99);
-	}
-	z = read(fa, c, 10000000000000);
-	if (z == -1)
-	{
-		write(STDERR_FILENO, "Error: Can't read from file test_folder/textfile_0\n", 51);
-		return (98);
-	}
-	d = write(fb, c, z);
-	if (d == -1)
-	{
-		write(STDERR_FILENO, "Error: Can't write to test_folder/textfile_0_copy_3\n", 52);
-		return (99);
-	}
+	z = read_fonct(argv[1], fa, c);
+	write_fonct(argv[2], fb, z, c);
 	a = close(fa);
 	b = close(fb);
 	if (a == -1 || b == -1)
 	{
-		write(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n", 100);
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
 	return (0);
+}
+
+int read_fonct(char *r, int fb, char *c)
+{
+	int a;
+
+	if (fb == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
+		exit(98);
+	}
+	a = read(fb, c, 1024);
+	if (a == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
+		exit(98);
+	}
+	return (a);
+}
+
+void write_fonct(char *r, int fb, int z, char *c)
+{
+	int q;
+
+	if (fb == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
+		exit(99);
+	}
+	q = write(fb, c, z);
+	if (q == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: can't writr to %s\n", r);
+		exit(99);
+	}
 }
