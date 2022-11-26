@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		return (98);
 	}
 	q = write(fb, c, z);
-	if (q < 0 || c == 0)
+	if (q < 0 || !c[200000])
 	{
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		exit(99);
