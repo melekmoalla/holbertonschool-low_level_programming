@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-int read_fonct(char *r, int fb, char *c);
+int read_fonct(char *r, int fa, char *c);
 
 int write_fonct(char *r, int fb, int z, char *c);
 
@@ -21,11 +21,6 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 	fa = open(argv[1], O_RDONLY, 0654);
-	if (fb == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
-		exit(98);
-	}
 	fb = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while (1)
 	{
@@ -44,11 +39,16 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
-int read_fonct(char *r, int fb, char *c)
+int read_fonct(char *r, int fa, char *c)
 {
 	int a;
 
-	a = read(fb, c, 20000);
+	if (fa == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
+		exit(98);
+	}
+	a = read(fa, c, 20000);
 	if (a == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", r);
