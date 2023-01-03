@@ -1,6 +1,6 @@
 #include "search_algos.h"
 
-int binary_searchh(int *array, size_t size, size_t h, int value)
+void binary_searchh(int *array, size_t size, size_t h, int value)
 {
     size_t i = h, min;
     int a, b;
@@ -20,7 +20,7 @@ int binary_searchh(int *array, size_t size, size_t h, int value)
         printf("\n");
         min = (a + b) / 2;
         if (value == array[min])
-            return (min);
+            return;
         if (value < array[min])
         {
             size = min;
@@ -33,7 +33,6 @@ int binary_searchh(int *array, size_t size, size_t h, int value)
             a = i;
         }
     }
-    return (-1);
 }
 
 int exponential_search(int *array, size_t size, int value)
@@ -55,7 +54,7 @@ int exponential_search(int *array, size_t size, int value)
                 {
                     a = size - 1;
                 }
-                printf("Value found between indexes[%ld] and [%ld]\n", b, a);
+                printf("Value found between indexes [%ld] and [%ld]\n", b, a);
                 binary_searchh(array, a, b, value);
                 return (i);
             }
