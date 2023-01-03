@@ -15,6 +15,10 @@ int interpolation_search(int *array, size_t size, int value)
     int high = size - 1;
     int mid = 0;
 
+    if (array == NULL)
+    {
+        return (-1);
+    }
     while ((array[high] != array[low]))
     {
         mid = low + ((value - array[low]) * (high - low) / (array[high] - array[low]));
