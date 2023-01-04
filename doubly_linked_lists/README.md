@@ -65,13 +65,16 @@ typedef struct dlistint_s
 
 # Representation of Doubly Linked List
 
-<a href="https://ibb.co/PjwGhN3"><img src="https://i.ibb.co/mT65qG1/Screenshot-20230104-095756.png" alt="Screenshot-20230104-095756" border="0"></a>
+<a href="https://ibb.co/Z2r8pH7"><img src="https://i.ibb.co/3RbN9fQ/Screenshot-20230104-095756.png" alt="Screenshot-20230104-095756" border="0"></a><br /><a target='_blank' href='https://usefulwebtool.com/russian-keyboard'></a><br />
 
 # Example in code insertion at the Beginning
 
 <a href="https://ibb.co/y01gDzF"><img src="https://i.ibb.co/kKfqpL2/Screenshot-20230104-100727.png" alt="Screenshot-20230104-100727" border="0"></a>
+
 <a href="https://ibb.co/bmZBtxS"><img src="https://i.ibb.co/4tGTkc6/Screenshot-20230104-100754.png" alt="Screenshot-20230104-100754" border="0"></a>
+
 <a href="https://ibb.co/Z1d0bm2"><img src="https://i.ibb.co/pr2Skyh/Screenshot-20230104-100845.png" alt="Screenshot-20230104-100845" border="0"></a>
+
 <a href="https://ibb.co/G3tN0sp"><img src="https://i.ibb.co/gFPh3v9/Screenshot-20230104-101223.png" alt="Screenshot-20230104-101223" border="0"></a>
 
 ## Learning Objectives
