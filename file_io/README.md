@@ -11,7 +11,7 @@
 
 Read or watch:
 - [File descriptors](https://en.wikipedia.org/wiki/File_descriptor)
-- [C Programming in Linux Tutorial #024 - open() read() write()Functions](https://en.wikipedia.org/wiki/File_descriptor)
+- [C Programming in Linux Tutorial #024 - open() read() write()Functions](https://www.youtube.com/watch?v=ZIe_j8xAkU4)
 
 man or help:
 
