@@ -24,6 +24,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
     }
     m = list;
     jump = sqrt(size);
+    printf("%ld\n", jump);
     while (current->next)
     {
         while (m->index < jump)
@@ -56,7 +57,15 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
         if (jump > size - 1 && h == 0)
         {
             h = b;
-            jump = size - 1;
+            if (size % 2 == 0)
+            {
+                jump = size - 1;
+            }
+            else
+            {
+                jump = size - 1;
+                break;
+            }
         }
     }
     printf("Value found between indexes [%ld] and [%ld]\n", h, jump);
