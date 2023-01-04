@@ -24,7 +24,6 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
     }
     m = list;
     jump = sqrt(size);
-    printf("%ld\n", jump);
     while (current->next)
     {
         while (m->index < jump)
