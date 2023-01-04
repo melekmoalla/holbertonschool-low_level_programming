@@ -60,7 +60,7 @@ What you should learn from this project:
 ### [1. 1](https://github.com/melekmoalla/holbertonschool-low_level_programming/blob/master/bit_manipulation/1-print_binary.c)
 * Write a function that prints the binary representation of a number.
 
-### [2. 10](.https://github.com/melekmoalla/holbertonschool-low_level_programming/blob/master/bit_manipulation/2-get_bit.c)
+### [2. 10](https://github.com/melekmoalla/holbertonschool-low_level_programming/blob/master/bit_manipulation/2-get_bit.c)
 * Write a function that returns the value of a bit at a given index.
 
 ### [3. 11](https://github.com/melekmoalla/holbertonschool-low_level_programming/tree/master/bit_manipulation)
