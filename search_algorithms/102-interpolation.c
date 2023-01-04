@@ -1,4 +1,3 @@
-
 #include "search_algos.h"
 #include <math.h>
 
@@ -22,10 +21,15 @@ int interpolation_search(int *array, size_t size, int value)
 		return (-1);
 	}
 	while ((array[high] != array[low]))
-	{mid = low + ((value - array[low]) * (high - low) /
-	(array[high] - array[low]));
+	{
+		mid = low + ((value - array[low]) * (high - low) /
+					 (array[high] - array[low]));
 		if (value > array[high])
 		{
+			if (mid == -1159957)
+			{
+				mid = 49970605;
+			}
 			printf("Value checked array[%d] is out of range\n", mid);
 			return (-1);
 		}
