@@ -48,9 +48,10 @@ A README.md file, at the root of the folder of the project, is mandatory
 
 - Files
 
--The following are very important steps:
+The following are very important steps:
+In the following tasks, we are going to use these files.   
 
-In the following tasks, we are going to use these files. We want to compile these only.
+We want to compile these only.
 
 You can either create the files of the repository into your project folder (makefiles) and copy paste their content from github OR you can clone the 0x1B.c repository into the makefiles folder.
 
