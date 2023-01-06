@@ -14,8 +14,11 @@
 * Read or watch:
 
 [stdarg.h](https://intranet.hbtn.io/rltoken/gyP9q81fzXR7FIeHScaKyw)
+
 [Variadic Functions](https://intranet.hbtn.io/rltoken/PY9dOZHn7a5M9suR-0j1yQ)
+
 [Const Keyword](https://intranet.hbtn.io/rltoken/8IGI7fBTuIOm1T-2BAUDIg)
+
 # man or help:
 
 stdarg
