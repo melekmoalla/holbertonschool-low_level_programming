@@ -6,8 +6,10 @@
 
 
 # C - Variadic functions
+
 <img src="
 https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSouW6sDjJODWy1S4UddOqGzYZBpKUatjUERw&usqp=CAU"/>
+
 # Resources
 
 * Read or watch:
