@@ -43,7 +43,6 @@ using the options -Wall -Werror -Wextra -pedantic -std=gnu89
 
 <img src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2021/07/Structure-in-C.jpg"/>
 
-<img src="https://slideplayer.com/slide/4432488/14/images/62/STRUCT%2C+TYPEDEF%2C+ENUM+%26+UNION.jpg"/>
 
 ## Author
 
