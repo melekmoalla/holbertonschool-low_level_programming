@@ -20,7 +20,8 @@
 [C Programming Tutorial 85, Recursion pt.1](https://www.youtube.com/watch?v=XGxbXMP6k8k)
 
 [C Programming Tutorial 86, Recursion pt.2](https://www.youtube.com/watch?v=7XiIS6HobNs)
-
+<br>
+<br>
 * Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
@@ -49,7 +50,7 @@ All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options
 <br>
 <img src="https://codeforwin.org/wp-content/uploads/2017/09/recursion-example-in-c.png"/>
 * Example 2:
-<div align=center>  
+
 
 <img src="https://cdn.programiz.com/sites/tutorial2program/files/cpp-function-recursion-example.png"/> 
 </div>
