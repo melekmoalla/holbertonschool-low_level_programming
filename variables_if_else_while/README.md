@@ -13,7 +13,7 @@ data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBMUFBcUFBEYGBcZERwTE
 Read or watch:
 
 
-[Everything] (https://intranet.hbtn.io/rltoken/ZPQW6TjCWFeX9Y5pN33NVA)
+[Everything](https://intranet.hbtn.io/rltoken/ZPQW6TjCWFeX9Y5pN33NVA)
 
 * (You do not have to learn everything in there yet, but make sure you read it entirely first and make sure you understand the slides: “comments”, “Data types | Integer types”, “Declaration”, “Characters”, “Arithmetic operators”, “Variables assignments”, “Comparisons”, “Logical operators”, “if, if…else”, “while loops”.)
 
